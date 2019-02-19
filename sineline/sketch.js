@@ -230,7 +230,7 @@ function gameOver() {
 	textSize(width * 0.03);
 	text("Enter name:", - width / 10, - height * 0.3);
 	textSize(width * 0.05);
-	text("Touch to show Leaderboard", 0, - height * 0.2);
+	text("Touch or Enter to show Leaderboard", 0, - height * 0.2);
 }
 
 function scores() {
@@ -239,7 +239,7 @@ function scores() {
 	textSize(width * 0.08);
 	text("Leaderboard", 0, - height * 0.7);
 	textSize(width * 0.05);
-	text("Touch to Restart", 0, - height * 0.2);
+	text("Touch or Enter to Restart", 0, - height * 0.2);
 
 	textSize(width * 0.05);
 	fill(255);

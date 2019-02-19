@@ -134,7 +134,7 @@ function draw() {
 
 	// MOVING STUFF
 	
-	if (mouseIsPressed || touches.length !== 0) {	// Arrow moves as long as the mouse is pressed or screen is touched
+	if (keyIsPressed || mouseIsPressed || touches.length !== 0) {	// Arrow moves as long as the mouse is pressed or screen is touched
 		obj.vel = constrain(obj.vel + obj.acc, 0, height / 40.0);
 		timer = 180;
 	} else {	// Deceleration.

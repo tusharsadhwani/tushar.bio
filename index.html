@@ -1,22 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tushar Sadhwani</title>
   <link rel="stylesheet" href="style.css">
-  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
-  <title>Placeholder</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
-<body>
-<div id="toggles">
-  <input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle" checked/>
-  <label for="checkbox1" class="checkbox-label" data-off="Work" data-on="Work"></label>
-  
-  <input type="checkbox" name="checkbox1" id="checkbox2" class="ios-toggle" checked/>
-  <label for="checkbox2" class="checkbox-label" data-off="Sleep" data-on="Sleep"></label>
-   
-  <input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle"/>
-  <label for="checkbox3" class="checkbox-label" data-off="Social Life" data-on="Social Life"></label>
-  <script language="javascript" type="text/javascript" src="sketch.js"></script>
-</div>
+<body x-data="{
+    tabs: ['About', 'Resume'],
+    activeTab: 'About',
+  }
+  "
+>
+  <nav>
+    <div class="navbar">
+      <span>
+        <a href=".">
+          <img class="logo" src="assets/ts.svg" alt="TS">
+        </a>
+      </span>
+      <template x-for="tab in tabs" :key="tab">
+        <span>
+          <a 
+            href="#"
+            @click="activeTab = tab"
+          >
+            <h3 
+              x-text="tab"
+              :class="{'active': tab === activeTab}"
+            ></h3>
+          </a>
+        </span>
+      </template>
+    </div>
+    <a href="#" style="float: right;margin: 0 20px;">
+      <img src="assets/menu.svg" alt="Menu">
+    </a>
+  </nav>
+  <div class="container" x-show="activeTab === 'About'">
+    <h1>Tushar Sadhwani</h1>
+    <h2>Python • Flutter • JavaScript • Go</h2>
+    <button 
+      class="action"
+      @click="activeTab = 'Resume'"
+    >
+      View Resume
+    </button>
+  </div>
 </body>
 </html>

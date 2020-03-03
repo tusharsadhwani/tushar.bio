@@ -1,0 +1,159 @@
+*,*:before,*:after{
+box-sizing:border-box;
+margin:0;
+padding:0;
+/*transition*/
+-webkit-transition:.25s ease-in-out;
+   -moz-transition:.25s ease-in-out;
+     -o-transition:.25s ease-in-out;
+        transition:.25s ease-in-out;
+outline:none;
+font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
+}
+body{
+background:#f1f1f1;
+}
+h1{
+margin:75px auto 0 auto;
+text-align:center;
+font-weight:200;
+color:#4b4b4b;
+}
+#toggles{
+width: 15%;
+margin:50px auto;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+.ios-toggle,.ios-toggle:active{
+position:absolute;
+top:-5000px;
+height:0;
+width:0;
+opacity:0;
+border:none;
+outline:none;
+}
+.checkbox-label{
+display:block;
+position:relative;
+padding:10px;
+margin-bottom:50px;
+font-size:30px;
+line-height:25px;
+width:150px;
+height:80px;
+/*border-radius*/
+-webkit-border-radius:40px;
+   -moz-border-radius:40px;
+        border-radius:40px;
+background:#f8f8f8;
+cursor:pointer;
+}
+.checkbox-label:before{
+content:'';
+display:block;
+position:absolute;
+z-index:1;
+line-height:34px;
+text-indent:40px;
+height:80px;
+width:80px;
+/*border-radius*/
+-webkit-border-radius:100%;
+   -moz-border-radius:100%;
+        border-radius:100%;
+top:0px;
+left:0px;
+right:auto;
+background:white;
+/*box-shadow*/
+-webkit-box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+   -moz-box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+        box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+}
+.checkbox-label:after{
+content:attr(data-off);
+display:block;
+position:absolute;
+z-index:0;
+top:0;
+left:-300px;
+padding:27px;
+height:100%;
+width:300px;
+text-align:right;
+color:#bfbfbf;
+white-space:nowrap;
+}
+.ios-toggle:checked + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 40px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+   -moz-box-shadow:inset 0 0 0 40px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+        box-shadow:inset 0 0 0 40px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+}
+.ios-toggle:checked + .checkbox-label:before{
+left:calc(100% - 80px);
+/*box-shadow*/
+-webkit-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+   -moz-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+        box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+}
+.ios-toggle:checked + .checkbox-label:after{
+content:attr(data-on);
+left:160px;
+width:60px;
+}
+/* GREEN CHECKBOX */
+
+#checkbox1 + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 0px rgba(0,122,255,1),0 0 0 2px #dddddd;
+   -moz-box-shadow:inset 0 0 0 0px rgba(0,122,255,1),0 0 0 2px #dddddd;
+        box-shadow:inset 0 0 0 0px rgba(0,122,255,1),0 0 0 2px #dddddd;
+}
+#checkbox1:checked + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 40px rgba(0,122,255,1),0 0 0 2px rgba(0,122,255,1);
+   -moz-box-shadow:inset 0 0 0 40px rgba(0,122,255,1),0 0 0 2px rgba(0,122,255,1);
+        box-shadow:inset 0 0 0 40px rgba(0,122,255,1),0 0 0 2px rgba(0,122,255,1);
+}
+#checkbox1:checked + .checkbox-label:after{
+color:rgba(0,122,255,1);
+}
+/* RED CHECKBOX */
+
+#checkbox2 + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 0px #007aff,0 0 0 2px #dddddd;
+   -moz-box-shadow:inset 0 0 0 0px #007aff,0 0 0 2px #dddddd;
+        box-shadow:inset 0 0 0 0px #007aff,0 0 0 2px #dddddd;
+}
+#checkbox2:checked + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 40px #007aff,0 0 0 2px #007aff;
+   -moz-box-shadow:inset 0 0 0 40px #007aff,0 0 0 2px #007aff;
+        box-shadow:inset 0 0 0 40px #007aff,0 0 0 2px #007aff;
+}
+#checkbox2:checked + .checkbox-label:after{
+color:#007aff;
+}
+/* BLUE CHECKBOX */
+
+#checkbox3 + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 0px #007aff,0 0 0 2px #dddddd;
+   -moz-box-shadow:inset 0 0 0 0px #007aff,0 0 0 2px #dddddd;
+        box-shadow:inset 0 0 0 0px #007aff,0 0 0 2px #dddddd;
+}
+#checkbox3:checked + .checkbox-label{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 40px #007aff,0 0 0 2px #007aff;
+   -moz-box-shadow:inset 0 0 0 40px #007aff,0 0 0 2px #007aff;
+        box-shadow:inset 0 0 0 40px #007aff,0 0 0 2px #007aff;
+}
+#checkbox3:checked + .checkbox-label:after{
+color:#007aff;
+}

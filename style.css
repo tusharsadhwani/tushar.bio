@@ -124,16 +124,16 @@ a:active {
     border-radius: 10px;
 }
 .p70 {
-    width: 70%;
+    width: calc(70% - 15px);
 }
 .p75 {
-    width: 75%;
+    width: calc(75% - 15px);
 }
 .p80 {
-    width: 80%;
+    width: calc(80% - 15px);
 }
 .p90 {
-    width: 90%;
+    width: calc(90% - 15px);
 }
 .fade {
     transition-property: all;

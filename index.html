@@ -13,7 +13,7 @@
     activeTab: '',
   }
   "
-  x-init="activeTab = tabs[0]"
+  x-init="activeTab = 'About'"
 >
   <nav>
     <div class="navbar">
@@ -52,7 +52,7 @@
     </button>
   </div>
 
-  <div class="container" x-show="activeTab === 'Resume'">
+  <div class="container flex" x-show="activeTab === 'Resume'">
     <div class="left">
       <h2>Left</h2>
     </div>
@@ -64,7 +64,7 @@
           skills: [
             {
               name: 'Python',
-              score: 90,
+              score: 100,
             },
             {
               name: 'Flutter',
@@ -87,7 +87,16 @@
         "
       >
         <template x-for="skill in skills">
-          <p x-text="`${skill.name} - ${skill.score}%`"></p>
+          <div class="skill">
+            <div class="skill-name" x-text="skill.name"></div>
+            <div class="skill-bar">
+              <div class="skill-bar-border"></div>
+              <div 
+                class="skill-value"
+                :style="`width: calc(${skill.score}% - 15px);`"
+              ></div>
+            </div>
+          </div>
         </template>
       </div>
     </div>

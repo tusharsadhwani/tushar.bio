@@ -70,19 +70,19 @@ nav {
     color:#333;
     transition-duration: 250ms;
 }
-.left {
+.projects-col {
     display: inline-block;
-    width: 48%;
+    width: 58%;
 }
-.right {
+.skills-col {
     display: inline-block;
-    width: 48%;
+    width: 38%;
 }
 @media screen and (max-width:600px) {
     .flex {
         flex-direction: column;
     }
-    .left, .right {
+    .skills-col, .projects-col {
         width: 100%;
         padding-bottom: 30px;
     }

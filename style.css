@@ -50,6 +50,7 @@ nav {
 .flex {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .action {
     margin-top: 30px;
@@ -70,11 +71,11 @@ nav {
 }
 .left {
     display: inline-block;
-    width: 49%;
+    width: 48%;
 }
 .right {
     display: inline-block;
-    width: 49%;
+    width: 48%;
 }
 @media screen and (max-width:600px) {
     .flex {
@@ -82,6 +83,7 @@ nav {
     }
     .left, .right {
         width: 100%;
+        padding-bottom: 30px;
     }
 }
 .skill {
@@ -89,10 +91,10 @@ nav {
     margin: 10px;
 }
 .skill-name {
-    width: 30%;
+    width: 35%;
 }
 .skill-bar {
-    width: 60%;
+    width: 65%;
     padding-right: 12px;
 }
 .skill-bar-border {

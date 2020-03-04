@@ -10,9 +10,10 @@
 </head>
 <body x-data="{
     tabs: ['About', 'Resume'],
-    activeTab: 'About',
+    activeTab: '',
   }
   "
+  x-init="activeTab = tabs[0]"
 >
   <nav>
     <div class="navbar">

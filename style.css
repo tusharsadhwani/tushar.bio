@@ -91,6 +91,9 @@ a:active.tab div  {
     min-width: 270px;
 }
 @media screen and (max-width:600px) {
+    .navbar span {
+        padding-right: 20px;
+    }
     .flex {
         flex-direction: column;
     }

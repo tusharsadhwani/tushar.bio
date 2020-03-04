@@ -34,6 +34,7 @@
         score: 80,
       },
     ],
+    showSkills: false,
   }
   "
   x-init="activeTab = 'About'"
@@ -49,7 +50,13 @@
         <span>
           <a 
             href="#"
-            @click="activeTab = tab"
+            @click="
+              activeTab = tab
+              if (tab == 'Resume')
+                setTimeout(() => showSkills = true, 300)
+              else
+                showSkills = false
+            "
           >
             <h3 
               x-text="tab"
@@ -75,7 +82,7 @@
     <h2>Python • Flutter • JavaScript • Go</h2>
     <button 
       class="action"
-      @click="activeTab = 'Resume'"
+      @click="activeTab = 'Resume'; setTimeout(() => showSkills = true, 300)"
     >
       View Resume
     </button>
@@ -103,7 +110,7 @@
             <div class="skill-bar">
               <div class="skill-bar-border"></div>
               <div
-                x-show="activeTab == 'Resume'"
+                x-show="showSkills"
                 class="skill-value"
                 :class="`p${skill.score}`"
                 x-transition:enter="increase-width"

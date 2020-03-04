@@ -48,7 +48,8 @@
       </span>
       <template x-for="tab in tabs" :key="tab">
         <span>
-          <a 
+          <a
+            class="tab"
             href="#"
             @click="
               activeTab = tab
@@ -58,10 +59,10 @@
                 showSkills = false
             "
           >
-            <h3 
+            <div 
               x-text="tab"
               :class="{'active': tab === activeTab}"
-            ></h3>
+            ></div>
           </a>
         </span>
       </template>

@@ -33,12 +33,16 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-a:active {
-    color: rgb(255, 54, 218);
+a.tab div {
+    font-size: 24px;
+}
+a:active.tab div  {
+    text-decoration-line: underline;
+    color: rgb(15, 179, 255);
 }
 .active {
     text-decoration-line: underline;
-    color: rgb(15, 179, 255);
+    color: rgb(255, 54, 218);
 }
 .navbar {
     display: inline-flex;

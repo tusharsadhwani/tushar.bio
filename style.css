@@ -44,7 +44,8 @@ nav {
     margin: 10px;
     width: 48px;
 }
-.container {
+.main {
+    position: absolute;
     padding: 30px;
 }
 .flex {
@@ -108,8 +109,43 @@ nav {
     top: -16px;
     left: 7px;
     height: 0px;
-    width: 50%;
     border: 4.5px solid white;
     background-color: white;
     border-radius: 10px;
+}
+.p70 {
+    width: 70%;
+}
+.p75 {
+    width: 75%;
+}
+.p80 {
+    width: 80%;
+}
+.p90 {
+    width: 90%;
+}
+.fade {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+.invisible {
+    opacity: 0%;
+}
+.visible {
+    opacity: 100%;
+}
+.skill-level {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+.increase-width {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 1000ms;
+}
+.zero-width {
+    width: 0;
 }

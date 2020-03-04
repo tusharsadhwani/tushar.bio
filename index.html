@@ -12,6 +12,28 @@
 <body x-data="{
     tabs: ['About', 'Resume'],
     activeTab: '',
+    skills: [
+      {
+        name: 'Python',
+        score: 90,
+      },
+      {
+        name: 'Flutter',
+        score: 80,
+      },
+      {
+        name: 'JavaScript ES6+',
+        score: 70,
+      },
+      {
+        name: 'Flask',
+        score: 75,
+      },
+      {
+        name: 'SQL',
+        score: 80,
+      },
+    ],
   }
   "
   x-init="activeTab = 'About'"
@@ -42,7 +64,13 @@
     </a>
   </nav>
   
-  <div class="container" x-show="activeTab === 'About'">
+  <div 
+    class="main" 
+    x-show="activeTab === 'About'"
+    x-transition:enter="fade"
+    x-transition:enter-start="invisible"
+    x-transition:enter-end="visible"
+  >
     <h1>Tushar Sadhwani</h1>
     <h2>Python • Flutter • JavaScript • Go</h2>
     <button 
@@ -53,7 +81,13 @@
     </button>
   </div>
 
-  <div class="container flex" x-show="activeTab === 'Resume'">
+  <div 
+    class="main flex" 
+    x-show="activeTab === 'Resume'"
+    x-transition:enter="fade"
+    x-transition:enter-start="invisible"
+    x-transition:enter-end="visible"
+  >
     <div class="left">
       <h2>Projects</h2>
       <h4>Ea nisi non et excepteur enim. Reprehenderit adipisicing fugiat dolore amet aute incididunt fugiat. Nostrud sint consequat dolore aliquip qui cillum in ad et enim.</h4>
@@ -62,40 +96,18 @@
       <h2>Skills</h2>
       <div
         class="skills"
-        x-data="{
-          skills: [
-            {
-              name: 'Python',
-              score: 90,
-            },
-            {
-              name: 'Flutter',
-              score: 80,
-            },
-            {
-              name: 'JavaScript ES6+',
-              score: 70,
-            },
-            {
-              name: 'Flask',
-              score: 75,
-            },
-            {
-              name: 'SQL',
-              score: 80,
-            },
-          ],
-        }
-        "
       >
         <template x-for="skill in skills">
           <div class="skill">
             <div class="skill-name" x-text="skill.name"></div>
             <div class="skill-bar">
               <div class="skill-bar-border"></div>
-              <div 
+              <div
+                x-show="activeTab == 'Resume'"
                 class="skill-value"
-                :style="`width: calc(${skill.score}% - 15px);`"
+                :class="`p${skill.score}`"
+                x-transition:enter="increase-width"
+                x-transition:enter-start="zero-width"
               ></div>
             </div>
           </div>

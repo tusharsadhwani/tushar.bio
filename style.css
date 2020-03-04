@@ -45,6 +45,7 @@ nav {
     width: 48px;
 }
 .container {
+    display: flex;
     padding: 30px;
 }
 .action {
@@ -63,4 +64,12 @@ nav {
     background-color: white;
     color:#333;
     transition-duration: 250ms;
+}
+.left {
+    display: inline-block;
+    width: 49%;
+}
+.right {
+    display: inline-block;
+    width: 49%;
 }

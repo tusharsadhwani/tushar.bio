@@ -40,6 +40,7 @@
       <img src="assets/menu.svg" alt="Menu">
     </a>
   </nav>
+  
   <div class="container" x-show="activeTab === 'About'">
     <h1>Tushar Sadhwani</h1>
     <h2>Python • Flutter • JavaScript • Go</h2>
@@ -49,6 +50,47 @@
     >
       View Resume
     </button>
+  </div>
+
+  <div class="container" x-show="activeTab === 'Resume'">
+    <div class="left">
+      <h2>Left</h2>
+    </div>
+    <div class="right">
+      <h2>Right</h2>
+      <div
+        class="skills"
+        x-data="{
+          skills: [
+            {
+              name: 'Python',
+              score: 90,
+            },
+            {
+              name: 'Flutter',
+              score: 80,
+            },
+            {
+              name: 'JavaScript ES6+',
+              score: 70,
+            },
+            {
+              name: 'Flask',
+              score: 75,
+            },
+            {
+              name: 'SQL',
+              score: 80,
+            },
+          ],
+        }
+        "
+      >
+        <template x-for="skill in skills">
+          <p x-text="`${skill.name} - ${skill.score}%`"></p>
+        </template>
+      </div>
+    </div>
   </div>
 </body>
 </html>

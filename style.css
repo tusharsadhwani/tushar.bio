@@ -171,6 +171,7 @@ a:active.tab div {
 .project-info {
   align-self: flex-start;
   padding: 0 20px;
+  word-wrap: break-word;
 }
 .project-img {
   max-height: 400px;
@@ -179,7 +180,7 @@ a:active.tab div {
   border-radius: 6px;
 }
 .project-link {
-  padding-top: 10px;
+  padding: 20px 0;
 }
 .project-link a {
   color: rgb(15, 179, 255);
@@ -191,6 +192,12 @@ hr {
   width: 60%;
   margin: 30px auto;
   border-radius: 2px;
+}
+@media (max-width: 700px) {
+  .project-info {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .fade {

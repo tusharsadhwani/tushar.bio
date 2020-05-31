@@ -137,16 +137,18 @@
     <div class="projects-col">
       <h2>Projects</h2>
       <template x-for="project in projects">
-        <div class="project">
-          <img class="project-img" :src="project.image" alt="">
-          <div class="project-info">
-            <h3 class="project-title" x-text="project.name"></h3>
-            <p x-text="project.description"></p>
-            <div class="project-link">
-              <a :href="project.link" target="_blank" x-text="project.link"></a>
+        <div>
+          <div class="project flex">
+            <div class="project-info">
+              <h3 class="project-title" x-text="project.name"></h3>
+              <p x-text="project.description"></p>
+              <div class="project-link">
+                <a :href="project.link" target="_blank" x-text="project.link"></a>
+              </div>
             </div>
-            <hr>
+            <img class="project-img" :src="project.image" alt="">
           </div>
+          <hr>
         </div>
       </template>
     </div>

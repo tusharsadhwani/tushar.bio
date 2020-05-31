@@ -163,11 +163,13 @@ a:active.tab div {
 .project {
   padding: 20px 0;
   display: flex;
+  align-items: center;
 }
 .project-title {
   padding: 15px 0;
 }
 .project-info {
+  align-self: flex-start;
   padding: 0 20px;
 }
 .project-img {
@@ -184,6 +186,11 @@ a:active.tab div {
 }
 .project-link:active {
   text-decoration-line: underline;
+}
+hr {
+  width: 60%;
+  margin: 30px auto;
+  border-radius: 2px;
 }
 
 .fade {

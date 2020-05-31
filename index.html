@@ -35,6 +35,20 @@
       },
     ],
     showSkills: false,
+    projects: [
+      {
+        name: 'Sudoku',
+        description: 'A complete 2-player sudoku game built using Flutter and Firebase.',
+        link: 'https://github.com/tusharsadhwani/sudoku-online',
+        image: 'assets/images/sudoku.jpg',
+      },
+      {
+        name: 'ChatApp',
+        description: 'A demo chat application made in flutter, with a Flask and SQLite backend.',
+        link: 'https://github.com/tusharsadhwani/chat_app',
+        image: 'assets/images/chat.jpg',
+      },
+    ],
   }
   "
   x-init="activeTab = 'About'"
@@ -122,7 +136,19 @@
     </div>
     <div class="projects-col">
       <h2>Projects</h2>
-      <h4>Ea nisi non et excepteur enim. Reprehenderit adipisicing fugiat dolore amet aute incididunt fugiat. Nostrud sint consequat dolore aliquip qui cillum in ad et enim.</h4>
+      <template x-for="project in projects">
+        <div class="project">
+          <img class="project-img" :src="project.image" alt="">
+          <div class="project-info">
+            <h3 class="project-title" x-text="project.name"></h3>
+            <p x-text="project.description"></p>
+            <div class="project-link">
+              <a :href="project.link" target="_blank" x-text="project.link"></a>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </template>
     </div>
   </div>
 </body>

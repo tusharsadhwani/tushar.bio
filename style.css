@@ -104,7 +104,7 @@ a:active.tab div {
   min-width: 270px;
   max-width: 500px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .navbar span {
     padding-right: 20px;
   }
@@ -168,6 +168,8 @@ a:active.tab div {
 .project {
   padding: 20px 0;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .project-title {
@@ -199,6 +201,9 @@ hr {
   border-radius: 2px;
 }
 @media (max-width: 700px) {
+  .project {
+    flex-direction: column;
+  }
   .project-info {
     width: 100%;
     padding: 0;

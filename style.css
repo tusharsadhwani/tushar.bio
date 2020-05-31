@@ -73,7 +73,8 @@ a:active.tab div {
   justify-content: space-between;
 }
 .action {
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
   height: 60px;
   padding: 10px 30px;
   outline: none;
@@ -83,6 +84,7 @@ a:active.tab div {
   font-size: 18px;
   font-weight: 600;
   transition-duration: 250ms;
+  cursor: pointer;
 }
 .action:hover {
   background-color: white;
@@ -165,6 +167,11 @@ a:active.tab div {
   width: calc(90% - 15px);
 }
 
+.projects-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 .project {
   padding: 20px 0;
   display: flex;
@@ -203,6 +210,13 @@ hr {
 @media (max-width: 700px) {
   .project {
     flex-direction: column;
+  }
+  .projects-heading {
+    flex-direction: column;
+  }
+  .projects-heading button {
+    align-self: center;
+    margin-top: 30px;
   }
   .project-info {
     width: 100%;

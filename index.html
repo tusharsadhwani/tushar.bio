@@ -96,12 +96,14 @@
   >
     <h1>Tushar Sadhwani</h1>
     <h2>Python • Flutter • JavaScript • Go</h2>
-    <button 
-      class="action"
-      @click="activeTab = 'Resume'; setTimeout(() => showSkills = true, 300)"
-    >
-      View Resume
-    </button>
+    <div style="padding-top: 30px;">
+      <button 
+        class="action"
+        @click="activeTab = 'Resume'; setTimeout(() => showSkills = true, 300)"
+      >
+        View Resume
+      </button>
+    </div>
   </div>
 
   <div 
@@ -135,7 +137,16 @@
       </div>
     </div>
     <div class="projects-col">
+      <div class="projects-heading">
       <h2>Projects</h2>
+        <a 
+          class="action"
+          href="https://bit.ly/tushar-resume"
+          target="_blank"
+        >
+          Download CV
+      </a>
+      </div>
       <template x-for="project in projects">
         <div>
           <div class="project">

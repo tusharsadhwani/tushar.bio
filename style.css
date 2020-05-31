@@ -4,6 +4,7 @@
   font-family: "Open Sans", sans-serif;
   color: white;
   text-decoration: none;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -25,7 +26,12 @@ h2 {
   font-size: 48px;
 }
 h3 {
-  font-size: 24px;
+  color: rgb(133, 100, 255);
+  font-size: 36px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.7rem;
 }
 nav {
   height: 80px;
@@ -57,6 +63,7 @@ a:active.tab div {
   width: 48px;
 }
 .main {
+  width: 100%;
   position: absolute;
   padding: 30px;
 }
@@ -105,6 +112,13 @@ a:active.tab div {
     padding-bottom: 30px;
   }
 }
+.skill,
+.skill-name,
+.skill-bar,
+.skill-bar-border,
+.skill-value {
+  box-sizing: content-box;
+}
 .skill {
   display: flex;
   margin: 10px;
@@ -145,6 +159,33 @@ a:active.tab div {
 .p90 {
   width: calc(90% - 15px);
 }
+
+.project {
+  padding: 20px 0;
+  display: flex;
+}
+.project-title {
+  padding: 15px 0;
+}
+.project-info {
+  padding: 0 20px;
+}
+.project-img {
+  max-height: 400px;
+  max-width: 400px;
+  border: 0.1px solid #151515;
+  border-radius: 6px;
+}
+.project-link {
+  padding-top: 10px;
+}
+.project-link a {
+  color: rgb(15, 179, 255);
+}
+.project-link:active {
+  text-decoration-line: underline;
+}
+
 .fade {
   transition-property: all;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);

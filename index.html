@@ -139,13 +139,12 @@
     <div class="projects-col">
       <div class="projects-heading">
       <h2>Projects</h2>
-        <a 
+        <button 
           class="action"
-          href="https://bit.ly/tushar-resume"
-          target="_blank"
+          @click="open('https://bit.ly/tushar-resume')"
         >
           Download CV
-      </a>
+        </button>
       </div>
       <template x-for="project in projects">
         <div>

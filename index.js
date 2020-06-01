@@ -43,6 +43,11 @@ const data = {
   ],
   contacts: [
     {
+      name: "Email",
+      link: "mailto:tushar.sadhwani000@gmail.com",
+      label: "tushar.sadhwani000@gmail.com",
+    },
+    {
       name: "Telegram",
       link: "https://t.me/drunktimelord",
       label: "@drunktimelord",

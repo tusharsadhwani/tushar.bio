@@ -15,35 +15,40 @@
 >
   <nav>
     <div class="navbar">
-      <span>
+      <span class="logo-container">
         <a href=".">
           <img class="logo" src="assets/ts.svg" alt="TS">
         </a>
       </span>
-      <template x-for="tab in tabs" :key="tab">
-        <span>
-          <a
-            class="tab"
-            href="#"
-            @click="
-              activeTab = tab
-              if (tab == 'Resume')
-                setTimeout(() => showSkills = true, 300)
-              else
-                showSkills = false
-            "
-          >
-            <div 
-              x-text="tab"
-              :class="{'active': tab === activeTab}"
-            ></div>
-          </a>
-        </span>
-      </template>
+      <div
+        class="links"
+        :class="{'zero-height': !showMenu}"
+      >
+        <template x-for="tab in tabs" :key="tab">
+          <span>
+            <a
+              class="tab"
+              href="#"
+              @click="
+                activeTab = tab
+                if (tab == 'Resume')
+                  setTimeout(() => showSkills = true, 300)
+                else
+                  showSkills = false
+              "
+            >
+              <div 
+                x-text="tab"
+                :class="{'active': tab === activeTab}"
+              ></div>
+            </a>
+          </span>
+        </template>
+      </div>
     </div>
-    <a href="#" style="float: right;margin: 0 30px;">
+    <button class="menu" @click="showMenu = !showMenu">
       <img src="assets/menu.svg" alt="">
-    </a>
+    </button>
   </nav>
   
   <div 

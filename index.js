@@ -1,6 +1,7 @@
 const data = {
   tabs: ["About", "Resume"],
   activeTab: "",
+  showMenu: false,
   skills: [
     {
       name: "Python",

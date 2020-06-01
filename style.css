@@ -34,7 +34,6 @@ p {
   line-height: 1.7rem;
 }
 nav {
-  height: 80px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,8 +58,22 @@ a:active.tab div {
   padding-right: 50px;
 }
 .logo {
-  margin: 10px;
+  margin: 12px;
   width: 48px;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 .main {
   width: 100%;
@@ -107,9 +120,6 @@ a:active.tab div {
   max-width: 500px;
 }
 @media screen and (max-width: 1100px) {
-  .navbar span {
-    padding-right: 20px;
-  }
   .flex {
     flex-direction: column;
   }
@@ -208,6 +218,33 @@ hr {
   border-radius: 2px;
 }
 @media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar span {
+    padding: 0;
+  }
+  .links {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 170px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-property: height;
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+  }
+  .tab div {
+    padding: 25px;
+  }
+  .logo-container {
+    align-self: flex-start;
+  }
+  .menu {
+    display: block;
+  }
   .project {
     flex-direction: column;
   }
@@ -247,4 +284,7 @@ hr {
 }
 .zero-width {
   width: 0;
+}
+.zero-height {
+  height: 0;
 }

@@ -1,3 +1,8 @@
+:root {
+  --background-color: rgb(11, 9, 26);
+  --primary-color: rgb(133, 100, 255);
+  --link-color: rgb(15, 179, 255);
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,18 +20,18 @@ body {
   display: none;
 }
 body {
-  background-color: rgb(11, 9, 26);
+  background-color: var(--background-color);
 }
 h1 {
   font-size: 72px;
   font-weight: 600;
 }
 h2 {
-  color: rgb(133, 100, 255);
+  color: var(--primary-color);
   font-size: 48px;
 }
 h3 {
-  color: rgb(133, 100, 255);
+  color: var(--primary-color);
   font-size: 36px;
 }
 p {
@@ -38,7 +43,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(11, 9, 26);
+  background-color: var(--background-color);
   z-index: 1;
 }
 a.tab div {
@@ -46,7 +51,7 @@ a.tab div {
 }
 a:active.tab div {
   text-decoration-line: underline;
-  color: rgb(15, 179, 255);
+  color: var(--link-color);
 }
 .active {
   text-decoration-line: underline;
@@ -221,7 +226,7 @@ a:active.tab div {
   padding: 20px 0;
 }
 .project-link a {
-  color: rgb(15, 179, 255);
+  color: var(--link-color);
 }
 .project-link:active {
   text-decoration-line: underline;
@@ -279,7 +284,7 @@ hr {
 }
 .contact-link {
   padding-left: 10px;
-  color: rgb(15, 179, 255);
+  color: var(--link-color);
 }
 
 .fade {

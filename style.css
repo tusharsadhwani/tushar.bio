@@ -34,10 +34,13 @@ p {
   line-height: 1.7rem;
 }
 nav {
+  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(11, 9, 26);
+  z-index: 1;
 }
 a.tab div {
   font-size: 24px;
@@ -76,8 +79,9 @@ a:active.tab div {
   cursor: pointer;
 }
 .main {
+  position: relative;
+  top: 80px;
   width: 100%;
-  position: absolute;
   padding: 30px;
 }
 .flex {
@@ -110,14 +114,20 @@ a:active.tab div {
   transition-duration: 0ms;
 }
 .projects-col {
-  display: inline-block;
   width: 58%;
 }
 .skills-col {
-  display: inline-block;
   width: 38%;
   min-width: 270px;
   max-width: 500px;
+}
+@media screen and (min-width: 1101px) {
+  .skills-col {
+    position: fixed;
+  }
+  .projects-col {
+    margin-left: 40%;
+  }
 }
 @media screen and (max-width: 1100px) {
   .flex {

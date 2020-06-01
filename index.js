@@ -1,5 +1,5 @@
 const data = {
-  tabs: ["About", "Resume"],
+  tabs: ["About", "Resume", "Contact"],
   activeTab: "",
   showMenu: false,
   skills: [
@@ -39,6 +39,22 @@ const data = {
         "A demo chat application made in flutter, with a Flask and SQLite backend.",
       link: "https://github.com/tusharsadhwani/chat_app",
       image: "assets/images/chat.jpg",
+    },
+  ],
+  contacts: [
+    {
+      name: "Telegram",
+      link: "https://t.me/drunktimelord",
+      label: "@drunktimelord",
+    },
+    {
+      name: "Instagram",
+      link: "https://instagram.com/sadhlife",
+      label: "@sadhlife",
+    },
+    {
+      name: "Github",
+      link: "https://github.com/tusharsadhwani",
     },
   ],
 };

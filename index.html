@@ -22,7 +22,7 @@
       </span>
       <div
         class="links"
-        :class="{'zero-height': !showMenu}"
+        :class="{'set-height': showMenu}"
       >
         <template x-for="tab in tabs" :key="tab">
           <span>
@@ -35,6 +35,7 @@
                   setTimeout(() => showSkills = true, 300)
                 else
                   showSkills = false
+                showMenu = false
               "
             >
               <div 
@@ -125,6 +126,31 @@
           </div>
           <hr>
         </div>
+      </template>
+    </div>
+  </div>
+
+  <div 
+    class="main" 
+    x-show="activeTab === 'Contact'"
+    x-transition:enter="fade"
+    x-transition:enter-start="invisible"
+    x-transition:enter-end="visible"
+    x-cloak
+  >
+    <h2>Contact</h2>
+    <div style="padding: 30px 10px;">
+      <template x-for="contact in contacts">
+        <div class="contact">
+        <label>
+          <span x-text="contact.name + ':'"></span>
+          <a 
+            class="contact-link" 
+            :href="contact.link" 
+            x-text="contact.label || contact.link"
+          ></a>
+        </label>
+      </div>
       </template>
     </div>
   </div>

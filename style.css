@@ -34,7 +34,6 @@ p {
   line-height: 1.7rem;
 }
 nav {
-  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
@@ -71,16 +70,14 @@ a:active.tab div {
 .menu {
   display: none;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 23px;
+  right: 23px;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
 }
 .main {
-  position: relative;
-  top: 80px;
   width: 100%;
   padding: 30px;
 }
@@ -122,6 +119,13 @@ a:active.tab div {
   max-width: 500px;
 }
 @media screen and (min-width: 1101px) {
+  nav {
+    position: fixed;
+  }
+  .main {
+    position: relative;
+    top: 80px;
+  }
   .skills-col {
     position: fixed;
   }

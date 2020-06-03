@@ -321,3 +321,16 @@ select,
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+body::-webkit-scrollbar {
+  width: 16px;
+}
+body::-webkit-scrollbar-track {
+  width: 10px;
+  background: var(--background-color);
+}
+body::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  border: 6px solid var(--background-color);
+}

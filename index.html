@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#000000">
-  <title>Tushar Sadhwani</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap">
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-  <script src="index.js"></script>
-</head>
-<body x-data="data"
-  x-init="activeTab = 'About'"
->
-  <nav>
-    <div class="navbar">
-      <span class="logo-container">
-        <a href=".">
-          <img class="logo" src="assets/ts.svg" alt="TS">
-        </a>
-      </span>
-      <div
-        class="links"
-        :class="{'set-height': showMenu}"
-      >
-        <template x-for="tab in tabs" :key="tab">
-          <span>
-            <a
-              class="tab"
-              href="#"
-              @click="
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Tushar Sadhwani</title>
+    <meta
+      name="description"
+      content="Tushar Sadhwani - Resume and Portfolio website."
+    />
+    <meta
+      name="keywords"
+      content="Tushar Sadhwani, tusharsadhwani, portfolio, resume, software, software developer"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tushar Sadhwani" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="/assets/images/preview.png" />
+    <meta
+      name="og:description"
+      content="Tushar Sadhwani - Resume and Portfolio website."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body x-data="data" x-init="activeTab = 'About'">
+    <nav>
+      <div class="navbar">
+        <span class="logo-container">
+          <a href=".">
+            <img class="logo" src="assets/ts.svg" alt="TS" />
+          </a>
+        </span>
+        <div class="links" :class="{'set-height': showMenu}">
+          <template x-for="tab in tabs" :key="tab">
+            <span>
+              <a
+                class="tab"
+                href="#"
+                @click="
                 activeTab = tab
                 if (tab == 'Resume')
                   setTimeout(() => showSkills = true, 300)
@@ -37,122 +51,118 @@
                   showSkills = false
                 showMenu = false
               "
-            >
-              <div 
-                x-text="tab"
-                :class="{'active': tab === activeTab}"
-              ></div>
-            </a>
-          </span>
-        </template>
+              >
+                <div x-text="tab" :class="{'active': tab === activeTab}"></div>
+              </a>
+            </span>
+          </template>
+        </div>
       </div>
-    </div>
-    <button class="menu" @click="showMenu = !showMenu">
-      <img src="assets/menu.svg" alt="">
-    </button>
-  </nav>
-  
-  <div 
-    class="main" 
-    x-show="activeTab === 'About'"
-    x-transition:enter="fade"
-    x-transition:enter-start="invisible"
-    x-transition:enter-end="visible"
-    x-cloak
-  >
-    <h1>Tushar Sadhwani</h1>
-    <h2>Python • Flutter • JavaScript • Go</h2>
-    <div style="padding-top: 30px;">
-      <button 
-        class="action"
-        @click="activeTab = 'Resume'; setTimeout(() => showSkills = true, 300)"
-      >
-        View Resume
+      <button class="menu" @click="showMenu = !showMenu">
+        <img src="assets/menu.svg" alt="" />
       </button>
-    </div>
-  </div>
+    </nav>
 
-  <div 
-    class="main flex" 
-    x-show="activeTab === 'Resume'"
-    x-transition:enter="fade"
-    x-transition:enter-start="invisible"
-    x-transition:enter-end="visible"
-    x-cloak
-  >
-    <div class="skills-col">
-      <h2>Skills</h2>
-      <div
-        class="skills"
-      >
-        <template x-for="skill in skills">
-          <div class="skill">
-            <div class="skill-name" x-text="skill.name"></div>
-            <div class="skill-bar">
-              <div class="skill-bar-border"></div>
-              <div
-                x-show="showSkills"
-                class="skill-value"
-                :class="`p${skill.score}`"
-                x-transition:enter="increase-width"
-                x-transition:enter-start="zero-width"
-              ></div>
-            </div>
-          </div>
-        </template>
-      </div>
-    </div>
-    <div class="projects-col">
-      <div class="projects-heading">
-      <h2>Projects</h2>
-        <button 
+    <div
+      class="main"
+      x-show="activeTab === 'About'"
+      x-transition:enter="fade"
+      x-transition:enter-start="invisible"
+      x-transition:enter-end="visible"
+      x-cloak
+    >
+      <h1>Tushar Sadhwani</h1>
+      <h2>Python • Flutter • JavaScript • Go</h2>
+      <div style="padding-top: 30px;">
+        <button
           class="action"
-          @click="open('https://bit.ly/tushar-resume')"
+          @click="activeTab = 'Resume'; setTimeout(() => showSkills = true, 300)"
         >
-          Download CV
+          View Resume
         </button>
       </div>
-      <template x-for="project in projects">
-        <div>
-          <div class="project">
-            <div class="project-info">
-              <h3 class="project-title" x-text="project.name"></h3>
-              <p x-text="project.description"></p>
-              <div class="project-link">
-                <a :href="project.link" target="_blank" x-text="project.link"></a>
+    </div>
+
+    <div
+      class="main flex"
+      x-show="activeTab === 'Resume'"
+      x-transition:enter="fade"
+      x-transition:enter-start="invisible"
+      x-transition:enter-end="visible"
+      x-cloak
+    >
+      <div class="skills-col">
+        <h2>Skills</h2>
+        <div class="skills">
+          <template x-for="skill in skills">
+            <div class="skill">
+              <div class="skill-name" x-text="skill.name"></div>
+              <div class="skill-bar">
+                <div class="skill-bar-border"></div>
+                <div
+                  x-show="showSkills"
+                  class="skill-value"
+                  :class="`p${skill.score}`"
+                  x-transition:enter="increase-width"
+                  x-transition:enter-start="zero-width"
+                ></div>
               </div>
             </div>
-            <img class="project-img" :src="project.image" alt="">
-          </div>
-          <hr>
+          </template>
         </div>
-      </template>
-    </div>
-  </div>
-
-  <div 
-    class="main" 
-    x-show="activeTab === 'Contact'"
-    x-transition:enter="fade"
-    x-transition:enter-start="invisible"
-    x-transition:enter-end="visible"
-    x-cloak
-  >
-    <h2>Contact</h2>
-    <div style="padding: 30px 10px;">
-      <template x-for="contact in contacts">
-        <div class="contact">
-        <label>
-          <span x-text="contact.name + ':'"></span>
-          <a 
-            class="contact-link" 
-            :href="contact.link" 
-            x-text="contact.label || contact.link"
-          ></a>
-        </label>
       </div>
-      </template>
+      <div class="projects-col">
+        <div class="projects-heading">
+          <h2>Projects</h2>
+          <button class="action" @click="open('https://bit.ly/tushar-resume')">
+            Download CV
+          </button>
+        </div>
+        <template x-for="project in projects">
+          <div>
+            <div class="project">
+              <div class="project-info">
+                <h3 class="project-title" x-text="project.name"></h3>
+                <p x-text="project.description"></p>
+                <div class="project-link">
+                  <a
+                    :href="project.link"
+                    target="_blank"
+                    x-text="project.link"
+                  ></a>
+                </div>
+              </div>
+              <img class="project-img" :src="project.image" alt="" />
+            </div>
+            <hr />
+          </div>
+        </template>
+      </div>
     </div>
-  </div>
-</body>
+
+    <div
+      class="main"
+      x-show="activeTab === 'Contact'"
+      x-transition:enter="fade"
+      x-transition:enter-start="invisible"
+      x-transition:enter-end="visible"
+      x-cloak
+    >
+      <h2>Contact</h2>
+      <div style="padding: 30px 10px;">
+        <template x-for="contact in contacts">
+          <div class="contact">
+            <label>
+              <span x-text="contact.name + ':'"></span>
+              <a
+                class="contact-link"
+                :href="contact.link"
+                x-text="contact.label || contact.link"
+              ></a>
+            </label>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
 </html>

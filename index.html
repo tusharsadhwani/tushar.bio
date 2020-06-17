@@ -211,27 +211,44 @@
     </div>
 
     <div
-      class="main"
+      class="main flex"
       x-show="activeTab === 'Contact'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
       x-transition:enter-end="visible"
       x-cloak
     >
-      <h2>Contact</h2>
-      <div style="padding: 30px 10px;">
-        <template x-for="contact in contacts">
-          <div class="contact">
-            <label>
-              <span x-text="contact.name + ':'"></span>
-              <a
-                class="contact-link"
-                :href="contact.link"
-                x-text="contact.label || contact.link"
-              ></a>
-            </label>
-          </div>
-        </template>
+      <div class="contact-section">
+        <h2>Contact</h2>
+        <div style="padding: 30px 10px;">
+          <template x-for="contact in contacts">
+            <div class="contact">
+              <label>
+                <span x-text="contact.name + ':'"></span>
+                <a
+                  class="contact-link"
+                  :href="contact.link"
+                  x-text="contact.label || contact.link"
+                ></a>
+              </label>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="contact-section coffee">
+        <a
+          class="bmc-button"
+          target="_blank"
+          href="https://www.buymeacoffee.com/tush"
+        >
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+            alt="Buy me a coffee"
+          />
+          <span style="margin-left: 5px; font-size: 19px !important;">
+            Buy me a coffee
+          </span>
+        </a>
       </div>
     </div>
   </body>

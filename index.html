@@ -33,7 +33,7 @@
   </head>
   <body
     x-data='{
-    tabs: ["About", "Resume", "Contact"],
+    tabs: ["about", "resume", "contact"],
     activeTab: "",
     showMenu: false,
     skills: [
@@ -97,7 +97,9 @@
       },
     ],
   }'
-    x-init="activeTab = 'About'"
+    x-init="
+      activeTab = (/#(.+)/.exec(window.location.href) ?? []).find(tab => tabs.includes(tab)) ?? tabs[0]
+    "
   >
     <nav>
       <div class="navbar">
@@ -111,10 +113,10 @@
             <span>
               <a
                 class="tab"
-                href="#"
+                :href="`#${tab}`"
                 @click="
                 activeTab = tab
-                if (tab == 'Resume')
+                if (tab == 'resume')
                   setTimeout(() => showSkills = true, 300)
                 else
                   showSkills = false
@@ -134,7 +136,7 @@
 
     <div
       class="main"
-      x-show="activeTab === 'About'"
+      x-show="activeTab === 'about'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
       x-transition:enter-end="visible"
@@ -145,7 +147,7 @@
       <div style="padding-top: 30px;">
         <button
           class="action"
-          @click="activeTab = 'Resume'; setTimeout(() => showSkills = true, 300)"
+          @click="activeTab = 'resume'; setTimeout(() => showSkills = true, 300)"
         >
           View Resume
         </button>
@@ -154,7 +156,7 @@
 
     <div
       class="main flex"
-      x-show="activeTab === 'Resume'"
+      x-show="activeTab === 'resume'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
       x-transition:enter-end="visible"
@@ -211,7 +213,7 @@
 
     <div
       class="main flex"
-      x-show="activeTab === 'Contact'"
+      x-show="activeTab === 'contact'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
       x-transition:enter-end="visible"

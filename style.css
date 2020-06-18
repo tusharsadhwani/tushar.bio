@@ -71,6 +71,7 @@ a:active.tab div {
 .links {
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 .menu {
   display: none;

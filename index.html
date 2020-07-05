@@ -112,6 +112,8 @@
   }'
     x-init="
       activeTab = (/#(.+)/.exec(window.location.href) ?? []).find(tab => tabs.includes(tab)) ?? tabs[0]
+      if (activeTab == 'resume')
+        setTimeout(() => showSkills = true, 300)
     "
   >
     <nav>

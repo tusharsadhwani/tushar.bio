@@ -164,13 +164,7 @@ a:active.tab div {
     width: 100%;
   }
 }
-.skill,
-.skill-name,
-.skill-bar,
-.skill-bar-border,
-.skill-value {
-  box-sizing: content-box;
-}
+
 .skill {
   display: flex;
   margin: 10px;
@@ -184,10 +178,10 @@ a:active.tab div {
   padding-right: 12px;
 }
 .skill-bar-border {
-  height: 15px;
   width: 100%;
   border: 4px solid white;
   border-radius: 14px;
+  padding-top: 15px;
 }
 .skill-value {
   position: relative;
@@ -196,7 +190,6 @@ a:active.tab div {
   width: 0%;
   height: 0px;
   border: 4.5px solid white;
-  background-color: white;
   border-radius: 10px;
 }
 .p70 {

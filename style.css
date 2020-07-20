@@ -83,6 +83,15 @@ a:active.tab div {
   outline: none;
   cursor: pointer;
 }
+.menu img {
+  position: absolute;
+  right: 0px;
+  width: 32px;
+  height: 32px;
+}
+.close {
+  padding: 2px;
+}
 .main {
   width: 100%;
   padding: 30px;
@@ -303,6 +312,14 @@ hr {
   transition-property: all;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 500ms;
+}
+.bounce-fade {
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
+}
+.small {
+  padding: 8px;
 }
 .invisible {
   opacity: 0%;

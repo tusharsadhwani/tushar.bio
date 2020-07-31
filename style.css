@@ -243,7 +243,8 @@ a:active.tab div {
   border-radius: 6px;
 }
 .project-img-open {
-  height: 80%;
+  max-height: 80%;
+  max-width: 80%;
 }
 .project-link {
   padding: 20px 0;
@@ -397,7 +398,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -91,6 +91,8 @@ a:active.tab div {
 }
 .close {
   padding: 2px;
+  width: 100%;
+  height: 100%;
 }
 .main {
   width: 100%;
@@ -240,6 +242,9 @@ a:active.tab div {
   border: 0.1px solid #151515;
   border-radius: 6px;
 }
+.project-img-open {
+  height: 80%;
+}
 .project-link {
   padding: 20px 0;
 }
@@ -313,6 +318,11 @@ hr {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 500ms;
 }
+.fade-fast {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 180ms;
+}
 .bounce-fade {
   transition-property: all;
   transition-timing-function: ease-out;
@@ -378,4 +388,25 @@ body::-webkit-scrollbar-thumb {
 }
 .bmc-button:active {
   top: 2px;
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }

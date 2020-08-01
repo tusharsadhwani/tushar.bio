@@ -247,7 +247,12 @@
                 class="project-img"
                 :src="project.image"
                 alt=""
-                @click="openImage = project.image"
+                @click="
+                  openImage = project.image
+                  const scrollbarWidth = window.innerWidth - document.body.clientWidth
+                  document.scrollingElement.style.overflow = 'hidden'
+                  document.body.style.paddingRight = `${scrollbarWidth}px`
+                "
               />
               <div
                 class="modal-background"
@@ -256,14 +261,22 @@
                 x-transition:enter-start="invisible"
                 x-transition:leave="fade-fast"
                 x-transition:leave-end="invisible"
-                @click="openImage = null"
+                @click="
+                  openImage = null
+                  document.scrollingElement.style.overflow = ''
+                  document.body.style.paddingRight = ''
+                "
               >
                 <div class="modal-close">
                   <img
                     class="close"
                     src="assets/close.svg"
                     alt=""
-                    @click="openImage = null"
+                    @click="
+                      openImage = null
+                      document.scrollingElement.style.overflow = ''
+                      document.body.style.paddingRight = ''
+                    "
                     x-show="openImage == project.image"
                     x-transition:enter="bounce-fade"
                     x-transition:enter-start="small invisible"
@@ -271,15 +284,7 @@
                     x-transition:leave-end="small invisible"
                   />
                 </div>
-                <img
-                  class="project-img-open"
-                  :src="project.image"
-                  alt=""
-                  @click="
-                    event.stopPropagation()
-                    openImage = project.image
-                  "
-                />
+                <img class="project-img-open" :src="project.image" alt="" />
               </div>
             </div>
             <hr />

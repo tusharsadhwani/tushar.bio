@@ -284,7 +284,12 @@
                     x-transition:leave-end="small invisible"
                   />
                 </div>
-                <img class="project-img-open" :src="project.image" alt="" />
+                <img
+                  class="project-img-open"
+                  :src="project.image"
+                  alt=""
+                  @click="event.stopPropagation()"
+                />
               </div>
             </div>
             <hr />

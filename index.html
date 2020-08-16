@@ -155,7 +155,7 @@
           </template>
         </div>
       </div>
-      <button class="menu" @click="showMenu = !showMenu">
+      <button class="menu" @click="showMenu = !showMenu" aria-label="menu">
         <img
           x-show="!showMenu"
           x-transition:enter="bounce-fade"
@@ -225,7 +225,7 @@
       <div class="projects-col">
         <div class="projects-heading">
           <h2>Projects</h2>
-          <a href="assets/resume.pdf" target="_blank">
+          <a href="assets/resume.pdf" target="_blank" rel="noopener">
             <button class="action">
               Download CV
             </button>
@@ -241,6 +241,7 @@
                   <a
                     :href="project.link"
                     target="_blank"
+                    rel="noopener"
                     x-text="project.link"
                   ></a>
                 </div>
@@ -329,6 +330,7 @@
         <a
           class="bmc-button"
           target="_blank"
+          rel="noopener"
           href="https://www.buymeacoffee.com/tush"
         >
           <img

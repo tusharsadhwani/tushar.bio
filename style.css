@@ -202,6 +202,7 @@ a:active.tab div {
   height: 0px;
   border: 4.5px solid white;
   border-radius: 10px;
+  background-color: white;
 }
 .p70 {
   width: calc(70% - 15px);

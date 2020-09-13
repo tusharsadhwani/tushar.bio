@@ -23,19 +23,19 @@ body {
   background-color: var(--background-color);
 }
 h1 {
-  font-size: 72px;
+  font-size: 4rem;
   font-weight: 600;
 }
 h2 {
   color: var(--primary-color);
-  font-size: 48px;
+  font-size: 2.66rem;
 }
 h3 {
   color: var(--primary-color);
-  font-size: 36px;
+  font-size: 2rem;
 }
 p {
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.7rem;
 }
 nav {
@@ -47,7 +47,7 @@ nav {
   z-index: 1;
 }
 a.tab div {
-  font-size: 24px;
+  font-size: 1.33rem;
 }
 a:active.tab div {
   text-decoration-line: underline;
@@ -62,11 +62,11 @@ a:active.tab div {
   align-items: center;
 }
 .navbar span {
-  padding-right: 50px;
+  padding-right: 3rem;
 }
 .logo {
-  margin: 12px;
-  width: 48px;
+  margin: 0.66rem;
+  width: 2.66rem;
 }
 .links {
   display: flex;
@@ -90,13 +90,13 @@ a:active.tab div {
   height: 32px;
 }
 .close {
-  padding: 2px;
+  padding: 0.1rem;
   width: 100%;
   height: 100%;
 }
 .main {
   width: 100%;
-  padding: 30px;
+  padding: 1.66rem;
 }
 .flex {
   display: flex;
@@ -106,13 +106,13 @@ a:active.tab div {
 .action {
   display: flex;
   align-items: center;
-  height: 60px;
-  padding: 10px 30px;
+  height: 3.33rem;
+  padding: 0.5rem 1.5rem;
   outline: none;
   background-color: transparent;
-  border: 2px solid white;
-  border-radius: 30px;
-  font-size: 18px;
+  border: 0.1rem solid white;
+  border-radius: 15rem;
+  font-size: 1rem;
   font-weight: 600;
   transition-duration: 250ms;
   cursor: pointer;
@@ -128,12 +128,15 @@ a:active.tab div {
   transition-duration: 0ms;
 }
 .projects-col {
-  width: 58%;
+  width: 60%;
 }
 .skills-col {
-  width: 38%;
-  min-width: 270px;
-  max-width: 500px;
+  width: 30%;
+}
+@media screen and (min-width: 1601px) {
+  html {
+    font-size: 1vw;
+  }
 }
 @media screen and (min-width: 1101px) {
   nav {
@@ -141,7 +144,7 @@ a:active.tab div {
   }
   .main {
     position: relative;
-    top: 80px;
+    top: 4.5rem;
   }
   .skills-col {
     position: fixed;
@@ -171,6 +174,9 @@ a:active.tab div {
     width: 100%;
     padding-bottom: 30px;
   }
+  .skills-col {
+    max-width: 500px;
+  }
   .contact-section {
     width: 100%;
   }
@@ -178,43 +184,43 @@ a:active.tab div {
 
 .skill {
   display: flex;
-  margin: 10px;
-  height: 40px;
+  margin: 0.5rem;
+  height: 2.4rem;
 }
 .skill-name {
   width: 35%;
 }
 .skill-bar {
   width: 65%;
-  padding-right: 12px;
+  padding-right: 0.66rem;
 }
 .skill-bar-border {
   width: 100%;
-  border: 4px solid white;
-  border-radius: 14px;
-  padding-top: 15px;
+  border: 0.22rem solid white;
+  border-radius: 1rem;
+  padding-top: 0.83rem;
 }
 .skill-value {
   position: relative;
-  top: -16px;
-  left: 7px;
+  top: -0.89rem;
+  left: 0.39rem;
   width: 0%;
-  height: 0px;
-  border: 4.5px solid white;
-  border-radius: 10px;
+  height: 0;
+  border: 0.25rem solid white;
+  border-radius: 0.55rem;
   background-color: white;
 }
 .p70 {
-  width: calc(70% - 15px);
+  width: calc(70% - 1rem);
 }
 .p75 {
-  width: calc(75% - 15px);
+  width: calc(75% - 1rem);
 }
 .p80 {
-  width: calc(80% - 15px);
+  width: calc(80% - 1rem);
 }
 .p90 {
-  width: calc(90% - 15px);
+  width: calc(90% - 1rem);
 }
 
 .projects-heading {
@@ -223,7 +229,7 @@ a:active.tab div {
   align-items: flex-start;
 }
 .project {
-  padding: 20px 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -234,12 +240,12 @@ a:active.tab div {
 }
 .project-info {
   align-self: flex-start;
-  padding: 0 20px;
+  padding: 0 1rem;
   word-wrap: break-word;
 }
 .project-img {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 22rem;
+  max-width: 22rem;
   border: 0.1px solid #151515;
   border-radius: 6px;
 }
@@ -248,7 +254,7 @@ a:active.tab div {
   max-width: 70%;
 }
 .project-link {
-  padding: 20px 0;
+  padding: 1rem 0;
 }
 .project-link a {
   color: var(--link-color);
@@ -259,7 +265,7 @@ a:active.tab div {
 hr {
   width: 60%;
   margin: 30px auto;
-  border-radius: 2px;
+  border-radius: 0.1rem;
 }
 @media (max-width: 700px) {
   .navbar {
@@ -305,6 +311,9 @@ hr {
   }
   .set-height {
     height: 250px;
+  }
+  .skills-col {
+    min-width: 270px;
   }
 }
 
@@ -363,23 +372,23 @@ img {
   -webkit-user-drag: none;
 }
 body::-webkit-scrollbar {
-  width: 16px;
+  width: 1rem;
 }
 body::-webkit-scrollbar-track {
-  width: 10px;
+  width: 0.5rem;
   background: var(--background-color);
 }
 body::-webkit-scrollbar-thumb {
-  width: 10px;
+  width: 0.5rem;
   background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
-  border: 6px solid var(--background-color);
+  border-radius: 1rem;
+  border: 0.4rem solid var(--background-color);
 }
 
 .bmc-button {
   display: inline-flex;
   align-items: center;
-  padding: 10px;
+  padding: 0.5rem;
   border-radius: 0.3em;
   font-family: "Open Sans", sans-serif;
   background-color: var(--primary-color);
@@ -388,11 +397,11 @@ body::-webkit-scrollbar-thumb {
 }
 .bmc-text {
   font-weight: bold;
-  margin-left: 10px;
-  font-size: 18px;
+  margin-left: 0.5rem;
+  font-size: 1rem;
 }
 .bmc-button:active {
-  top: 2px;
+  top: 0.1rem;
 }
 
 .modal-background {

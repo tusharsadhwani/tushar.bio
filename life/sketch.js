@@ -6,7 +6,7 @@ let density_slider;
 let reset_button;
 
 let resizeTimeout;
-let recentlyResized = false;
+let resizing = false;
 
 let pixels = {
   list: [],
@@ -125,24 +125,20 @@ function setup() {
     draw();
   });
 
-  if (!recentlyResized) {
-    clearTimeout(resizeTimeout);
-    recentlyResized = true;
-    resizeTimeout = setTimeout(() => {
-      [w, h] = count_grid(width, height);
-      setup_pixels();
-      recentlyResized = false;
-    }, 500);
-  }
+  clearTimeout(resizeTimeout);
+  resizing = true;
+  resizeTimeout = setTimeout(() => {
+    [w, h] = count_grid(width, height);
+    setup_pixels();
+    resizing = false;
+  }, 50);
 }
 
 function draw() {
   frameRate(speed_slider.value());
   background(26, 34, 49);
 
-  if (!recentlyResized) {
-    pixels.life();
-  }
+  if (!resizing) pixels.life();
   pixels.show();
 
   fill(255);

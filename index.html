@@ -137,7 +137,7 @@
           return true
         }
       })
-      tabData.activeTab = (/#(.+)/.exec(window.location.href) ?? []).find(tab => tabs.includes(tab)) ?? tabs[0]
+      tabData.activeTab = tabs.find(tab => location.hash === `#${tab}`) ?? tabs[0]
     "
   >
     <nav>

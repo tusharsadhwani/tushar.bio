@@ -16,9 +16,6 @@ body {
   width: 100%;
   height: 100%;
 }
-[x-cloak] {
-  display: none;
-}
 body {
   background-color: var(--background-color);
 }

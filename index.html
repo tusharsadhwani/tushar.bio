@@ -36,7 +36,7 @@
 
     <link rel="stylesheet" href="style.css" />
     <link
-      rel="stylesheet"
+      rel="preload" as="style" onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
     />
     <script
@@ -44,6 +44,11 @@
       async
     ></script>
   </head>
+  <style>
+    [x-cloak] {
+      display: none;
+    }
+  </style>
   <body
     x-data='{
     tabs: ["about", "resume", "contact"],

@@ -1,3 +1,6 @@
 [submodule "sineline"]
 	path = sineline
 	url = https://github.com/tusharsadhwani/sineline
+[submodule "blog"]
+	path = blog
+	url = https://github.com/tusharsadhwani/blog

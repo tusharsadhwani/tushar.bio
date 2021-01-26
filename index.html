@@ -338,18 +338,19 @@
       <div class="contact-section">
         <h2>Contact</h2>
         <div style="padding-top: 30px">
-          <template x-for="contact in contacts">
-            <div class="contact">
-              <label>
-                <span x-text="contact.name + ':'"></span>
-                <a
-                  class="contact-link"
-                  :href="contact.link"
-                  x-text="contact.label || contact.link"
-                ></a>
-              </label>
-            </div>
-          </template>
+          <table>
+            <tbody>
+              <template x-for="contact in contacts">
+                <tr>
+                  <td class="contact" x-text="contact.name + ':'"></td>
+                  <td
+                    class="contact-link"
+                    :href="contact.link"
+                    x-text="contact.label || contact.link"
+                  ></td>
+              </template>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="contact-section coffee">

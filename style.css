@@ -172,10 +172,10 @@ a:active.tab div {
   width: 50%;
 }
 .contact {
-  padding: 6px;
+  padding: 0.5rem 0;
 }
 .contact-link {
-  padding-left: 10px;
+  padding-left: 1rem;
   color: var(--link-color);
 }
 
@@ -268,8 +268,7 @@ a:active.tab div {
 .project-img {
   max-height: 26rem;
   max-width: 22rem;
-  border: 0.1px solid #151515;
-  border-radius: 6px;
+  border-radius: 0.3rem;
 }
 .project-img-open {
   max-height: 80%;
@@ -441,10 +440,10 @@ body::-webkit-scrollbar-thumb {
 }
 .modal-close {
   position: absolute;
-  top: 32px;
-  right: 32px;
-  width: 32px;
-  height: 32px;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

@@ -18,17 +18,19 @@ body {
 }
 body {
   background-color: var(--background-color);
-  background-size: 40px 40px;
+  background-size: 2.5rem 2.5rem;
   background-image: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.04) 2px,
+    rgba(255, 255, 255, 0.04) 0.12rem,
     transparent 0
   );
   background-attachment: fixed;
 }
 h1 {
   font-size: 4rem;
+  line-height: 5rem;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 h2 {
   color: var(--primary-color);
@@ -37,6 +39,12 @@ h2 {
 h3 {
   color: var(--primary-color);
   font-size: 2rem;
+  line-height: 3rem;
+}
+h4 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 p {
   font-size: 1rem;
@@ -149,6 +157,9 @@ a:active.tab div {
     position: relative;
     top: 4.5rem;
   }
+  .hero {
+    margin-left: 5rem;
+  }
   .skills-col {
     position: fixed;
   }
@@ -230,6 +241,7 @@ a:active.tab div {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 1.5rem;
 }
 .project {
   padding: 1rem 0;
@@ -239,14 +251,22 @@ a:active.tab div {
   align-items: center;
 }
 .project-title {
-  padding: 15px 0;
+  padding-bottom: 1rem;
 }
 .project-info {
+  flex: 1;
   align-self: flex-start;
+  padding-right: 1rem;
   word-wrap: break-word;
 }
+.project-img-container {
+  min-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .project-img {
-  max-height: 22rem;
+  max-height: 26rem;
   max-width: 22rem;
   border: 0.1px solid #151515;
   border-radius: 6px;
@@ -266,7 +286,7 @@ a:active.tab div {
 }
 hr {
   width: 60%;
-  margin: 30px auto;
+  margin: 2rem auto;
   border-radius: 0.1rem;
 }
 @media (max-width: 700px) {

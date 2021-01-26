@@ -79,18 +79,18 @@
     showSkills: false,
     projects: [
       {
+        name: "InstaChat",
+        description:
+          "A working replica of Instagram DMs and stories, written in Flutter and Go.",
+        link: "https://github.com/tusharsadhwani/instachat",
+        image: "assets/images/instachat.webp",
+      },
+      {
         name: "Sudoku",
         description:
           "A complete 2-player sudoku game built using Flutter and Firebase.",
         link: "https://github.com/tusharsadhwani/sudoku-online",
         image: "assets/images/sudoku.webp",
-      },
-      {
-        name: "ChatApp",
-        description:
-          "A demo chat application made in flutter, with a Flask and SQLite backend.",
-        link: "https://github.com/tusharsadhwani/chat_app",
-        image: "assets/images/chat.webp",
       },
       {
         name: "Python Snippets",
@@ -196,18 +196,27 @@
     </nav>
 
     <div
-      class="main"
+      class="main flex"
       x-show="tabData.activeTab === 'about'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
       x-cloak
     >
-      <h1>Tushar Sadhwani</h1>
-      <h2>Python • Flutter • JavaScript • Go</h2>
-      <div style="padding-top: 30px">
-        <button class="action" @click="tabData.activeTab = 'resume'">
-          View Resume
-        </button>
+      <div class="hero">
+        <h4>Hi, I'm</h4>
+        <h1>Tushar Sadhwani</h1>
+        <h4>and I do:</h4>
+        <ul style="margin-left: 1rem; list-style: none;">
+          <li><h3>• Python</h3></li>
+          <li><h3>• Flutter</h3></li>
+          <li><h3>• TypeScript</h3></li>
+          <li><h3>• Go</h3></li>
+        </ul>
+        <div style="padding-top: 30px">
+          <button class="action" @click="tabData.activeTab = 'resume'">
+            View Resume
+          </button>
+        </div>
       </div>
     </div>
 
@@ -261,17 +270,19 @@
                   ></a>
                 </div>
               </div>
-              <img
-                class="project-img"
-                :src="project.image"
-                alt=""
-                @click="
-                  openImage = project.image
-                  const scrollbarWidth = window.innerWidth - document.body.clientWidth
-                  document.scrollingElement.style.overflow = 'hidden'
-                  document.body.style.paddingRight = `${scrollbarWidth}px`
-                "
-              />
+              <div class="project-img-container">
+                <img
+                  class="project-img"
+                  :src="project.image"
+                  alt=""
+                  @click="
+                    openImage = project.image
+                    const scrollbarWidth = window.innerWidth - document.body.clientWidth
+                    document.scrollingElement.style.overflow = 'hidden'
+                    document.body.style.paddingRight = `${scrollbarWidth}px`
+                  "
+                />
+              </div>
               <div
                 class="modal-background"
                 x-show="openImage == project.image"

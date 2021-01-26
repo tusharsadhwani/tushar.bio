@@ -336,18 +336,20 @@
       x-cloak
     >
       <div class="contact-section">
-        <h2>Contact</h2>
+        <h2>Contact Me:</h2>
         <div style="padding-top: 30px">
           <table>
             <tbody>
               <template x-for="contact in contacts">
                 <tr>
                   <td class="contact" x-text="contact.name + ':'"></td>
-                  <td
-                    class="contact-link"
-                    :href="contact.link"
-                    x-text="contact.label || contact.link"
-                  ></td>
+                  <td>
+                    <a
+                      class="contact-link"
+                      :href="contact.link"
+                      x-text="contact.label || contact.link">
+                    </a>
+                  </td>
               </template>
             </tbody>
           </table>

@@ -1,7 +1,7 @@
 :root {
-  --background-color: rgb(10, 10, 30);
-  --primary-color: rgb(133, 100, 255);
-  --link-color: rgb(15, 179, 255);
+  --background-color: rgb(10, 10, 20);
+  --primary-color: rgb(100, 50, 255);
+  --link-color: rgb(15, 180, 255);
 }
 * {
   margin: 0;

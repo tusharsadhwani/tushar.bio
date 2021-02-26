@@ -36,11 +36,12 @@
 
     <link rel="stylesheet" href="style.css" />
     <link
-      rel="preload" as="style" onload="this.rel='stylesheet'"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
     />
-    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine-ie11.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"></script>
   </head>
   <style>
     [x-cloak] {
@@ -211,7 +212,7 @@
         <h4>Hi, I'm</h4>
         <h1>Tushar Sadhwani</h1>
         <h4>and I do:</h4>
-        <ul style="margin-left: 1rem; list-style: none;">
+        <ul style="margin-left: 1rem; list-style: none">
           <li><h3>• Python</h3></li>
           <li><h3>• Flutter</h3></li>
           <li><h3>• TypeScript</h3></li>
@@ -352,9 +353,10 @@
                     <a
                       class="contact-link"
                       :href="contact.link"
-                      x-text="contact.label || contact.link">
-                    </a>
+                      x-text="contact.label || contact.link"
+                    ></a>
                   </td>
+                </tr>
               </template>
             </tbody>
           </table>

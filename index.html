@@ -356,6 +356,7 @@
                   <td>
                     <a
                       title="Contact"
+                      :title="'Contact me on ' + contact.name"
                       class="contact-link"
                       :href="contact.link"
                       x-text="contact.label || contact.link"

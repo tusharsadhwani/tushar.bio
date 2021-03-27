@@ -2,6 +2,7 @@
   --background-color: rgb(10, 10, 20);
   --primary-color: rgb(100, 50, 255);
   --link-color: rgb(15, 180, 255);
+  --padding-right: 0px;
 }
 * {
   margin: 0;
@@ -25,6 +26,7 @@ body {
     transparent 0
   );
   background-attachment: fixed;
+  padding-right: var(--padding-right);
 }
 h1 {
   font-size: 4rem;
@@ -143,6 +145,7 @@ a:active.tab div {
 }
 .skills-col {
   width: 30%;
+  padding-right: calc(0.3 * var(--padding-right));
 }
 @media screen and (min-width: 1601px) {
   html {

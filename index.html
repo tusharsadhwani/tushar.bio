@@ -9,10 +9,6 @@
       name="description"
       content="Tushar Sadhwani • Resume and Portfolio website."
     />
-    <meta
-      name="keywords"
-      content="Tushar Sadhwani, tusharsadhwani, portfolio, resume, software, software developer"
-    />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Tushar Sadhwani" />
     <meta property="og:locale" content="en_IN" />
@@ -154,7 +150,7 @@
     <nav>
       <div class="navbar">
         <span class="logo-container">
-          <a href=".">
+          <a title="Home" href="/">
             <img class="logo" src="assets/ts.svg" alt="TS" />
           </a>
         </span>
@@ -162,6 +158,8 @@
           <template x-for="tab in tabs" :key="tab">
             <span>
               <a
+                title="Navbar Tab"
+                :title="tab"
                 class="tab"
                 :href="`#${tab}`"
                 @click="
@@ -186,7 +184,7 @@
           x-transition:leave="bounce-fade"
           x-transition:leave-end="small invisible"
           src="assets/menu.svg"
-          alt=""
+          alt="menu"
         />
         <img
           class="close"
@@ -196,7 +194,7 @@
           x-transition:leave="bounce-fade"
           x-transition:leave-end="small invisible"
           src="assets/close.svg"
-          alt=""
+          alt="close"
         />
       </button>
     </nav>
@@ -257,7 +255,7 @@
       <div class="projects-col">
         <div class="projects-heading">
           <h2>Projects</h2>
-          <a href="https://tshr.me/cv" target="_blank" rel="noopener">
+          <a title="Download CV" href="https://tshr.me/cv" target="_blank" rel="noopener">
             <button class="action">Download CV</button>
           </a>
         </div>
@@ -269,6 +267,8 @@
                 <p x-text="project.description"></p>
                 <div class="project-link">
                   <a
+                    title="Project link"
+                    :title="'Link for ' + project.name"
                     :href="project.link"
                     target="_blank"
                     rel="noopener"
@@ -280,7 +280,8 @@
                 <img
                   class="project-img"
                   :src="project.image"
-                  alt=""
+                  :alt="'Image for ' + project.name"
+                  alt="Project image"
                   @click="
                     openImage = project.image
                     const scrollbarWidth = window.innerWidth - document.body.clientWidth
@@ -306,7 +307,7 @@
                   <img
                     class="close"
                     src="assets/close.svg"
-                    alt=""
+                    alt="close"
                     @click="
                       openImage = null
                       document.scrollingElement.style.overflow = ''
@@ -322,7 +323,8 @@
                 <img
                   class="project-img-open"
                   :src="project.image"
-                  alt=""
+                  alt="Project image"
+                  :alt="'Image for ' + project.name"
                   @click="event.stopPropagation()"
                 />
               </div>
@@ -351,6 +353,7 @@
                   <td class="contact" x-text="contact.name + ':'"></td>
                   <td>
                     <a
+                      title="Contact"
                       class="contact-link"
                       :href="contact.link"
                       x-text="contact.label || contact.link"
@@ -364,6 +367,7 @@
       </div>
       <div class="contact-section coffee">
         <a
+          title="Buy me a coffee"
           class="bmc-button"
           target="_blank"
           rel="noopener"

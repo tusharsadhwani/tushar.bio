@@ -234,6 +234,29 @@ a:active.tab div {
 .p90 {
   width: calc(90% - 1rem);
 }
+.skills-legend {
+  display: flex;
+  margin: 0 0.5rem;
+}
+.skills-legend > :first-child {
+  width: 35%;
+}
+.skills-legend > :last-child {
+  width: 65%;
+  display: flex;
+  align-items: center;
+}
+.skills-legend p {
+  color: #555;
+  font-size: 0.9rem;
+}
+.skill-dash {
+  margin: 0.5rem;
+  flex: 1;
+  height: 0;
+  border-top: 0.5px dashed #666;
+  opacity: 0.5;
+}
 
 .projects-heading {
   display: flex;

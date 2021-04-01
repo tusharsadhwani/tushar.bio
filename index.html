@@ -72,6 +72,10 @@
         score: 75,
       },
       {
+        name: "Go",
+        score: 70,
+      },
+      {
         name: "SQL",
         score: 70,
       },
@@ -240,6 +244,16 @@
       <div class="skills-col">
         <h2>Skills</h2>
         <div class="skills">
+          <div class="skills-legend">
+            <div>
+              <p>Skill level</p>
+            </div>
+            <div>
+              <p>Beginner</p>
+              <div class="skill-dash"></div>
+              <p>Expert</p>
+            </div>
+          </div>
           <template x-for="skill in skills">
             <div class="skill">
               <div class="skill-name" x-text="skill.name"></div>

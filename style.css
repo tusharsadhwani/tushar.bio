@@ -209,22 +209,17 @@ a:active.tab div {
 }
 .skill-bar {
   width: 65%;
-  padding-right: 0.66rem;
 }
 .skill-bar-border {
-  width: 100%;
-  border: 0.22rem solid white;
+  border: 0.25rem solid white;
   border-radius: 1rem;
-  padding-top: 0.85rem;
+  min-height: 1.4rem;
 }
 .skill-value {
-  position: relative;
-  top: -0.89rem;
-  left: 0.39rem;
-  width: 0%;
   height: 0;
+  margin: 0.2rem;
   border: 0.25rem solid white;
-  border-radius: 0.55rem;
+  border-radius: 1rem;
   background-color: white;
 }
 .p70 {

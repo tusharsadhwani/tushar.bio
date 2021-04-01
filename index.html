@@ -244,14 +244,15 @@
             <div class="skill">
               <div class="skill-name" x-text="skill.name"></div>
               <div class="skill-bar">
-                <div class="skill-bar-border"></div>
-                <div
-                  x-show="showSkills"
-                  class="skill-value"
-                  :class="`p${skill.score}`"
-                  x-transition:enter="increase-width"
-                  x-transition:enter-start="zero-width"
-                ></div>
+                <div class="skill-bar-border">
+                  <div
+                    x-show="showSkills"
+                    class="skill-value"
+                    :class="`p${skill.score}`"
+                    x-transition:enter="increase-width"
+                    x-transition:enter-start="zero-width"
+                  ></div>
+                </div>
               </div>
             </div>
           </template>

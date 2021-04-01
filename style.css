@@ -209,22 +209,17 @@ a:active.tab div {
 }
 .skill-bar {
   width: 65%;
-  padding-right: 0.66rem;
 }
 .skill-bar-border {
-  width: 100%;
-  border: 0.22rem solid white;
+  border: 0.25rem solid white;
   border-radius: 1rem;
-  padding-top: 0.85rem;
+  min-height: 1.4rem;
 }
 .skill-value {
-  position: relative;
-  top: -0.89rem;
-  left: 0.39rem;
-  width: 0%;
   height: 0;
+  margin: 0.2rem;
   border: 0.25rem solid white;
-  border-radius: 0.55rem;
+  border-radius: 1rem;
   background-color: white;
 }
 .p70 {
@@ -238,6 +233,29 @@ a:active.tab div {
 }
 .p90 {
   width: calc(90% - 1rem);
+}
+.skills-legend {
+  display: flex;
+  margin: 0 0.5rem;
+}
+.skills-legend > :first-child {
+  width: 35%;
+}
+.skills-legend > :last-child {
+  width: 65%;
+  display: flex;
+  align-items: center;
+}
+.skills-legend p {
+  color: #555;
+  font-size: 0.9rem;
+}
+.skill-dash {
+  margin: 0.5rem;
+  flex: 1;
+  height: 0;
+  border-top: 0.5px dashed #666;
+  opacity: 0.5;
 }
 
 .projects-heading {

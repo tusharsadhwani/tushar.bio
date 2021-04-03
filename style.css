@@ -251,6 +251,7 @@ a:active.tab div {
 .skills-legend p {
   font-size: 0.8rem;
   line-height: 0.6rem;
+  opacity: 0.7;
 }
 
 .projects-heading {

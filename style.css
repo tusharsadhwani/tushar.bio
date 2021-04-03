@@ -236,6 +236,7 @@ a:active.tab div {
 }
 .skills-legend {
   display: flex;
+  justify-content: flex-end;
   margin: 0 0.5rem;
 }
 .skills-legend > :first-child {
@@ -245,17 +246,21 @@ a:active.tab div {
   width: 65%;
   display: flex;
   align-items: center;
+  opacity: 0.7;
 }
 .skills-legend p {
-  color: #555;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+.skill-dash-container {
+  margin: 0.3rem;
+  flex: 1;
+  overflow: hidden;
+  height: 0.05rem;
 }
 .skill-dash {
-  margin: 0.5rem;
-  flex: 1;
-  height: 0;
-  border-top: 0.5px dashed #666;
-  opacity: 0.5;
+  width: 100%;
+  border-bottom: 0.02rem dashed white;
+  transform: scale(3.6);
 }
 
 .projects-heading {
@@ -263,6 +268,10 @@ a:active.tab div {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1.5rem;
+}
+.projects-heading .action {
+  position: relative;
+  bottom: -6px;
 }
 .project {
   padding: 1rem 0;
@@ -339,13 +348,6 @@ hr {
   }
   .project {
     flex-direction: column;
-  }
-  .projects-heading {
-    flex-direction: column;
-  }
-  .projects-heading button {
-    align-self: center;
-    margin-top: 30px;
   }
   .project-info {
     width: 100%;

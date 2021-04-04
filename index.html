@@ -111,7 +111,18 @@
         image: "assets/images/sineline.webp",
       },
     ],
-    openImage: null,
+    openedImage: null,
+    openImage(newImage) {
+      this.openedImage = newImage
+      const scrollbarWidth = window.innerWidth - document.body.clientWidth
+      document.scrollingElement.style.overflow = "hidden"
+      document.documentElement.style.setProperty("--padding-right", `${scrollbarWidth}px`)
+    },
+    closeImage() {
+      this.openedImage = null
+      document.scrollingElement.style.overflow = ""
+      document.documentElement.style.setProperty("--padding-right", "0px")
+    },
     contacts: [
       {
         name: "Email",
@@ -163,6 +174,27 @@
             <img class="logo" src="assets/ts.svg" alt="TS" />
           </a>
         </span>
+        <button class="menu" @click="showMenu = !showMenu" aria-label="menu">
+          <img
+            x-show="!showMenu"
+            x-transition:enter="bounce-fade"
+            x-transition:enter-start="small invisible"
+            x-transition:leave="bounce-fade"
+            x-transition:leave-end="small invisible"
+            src="assets/menu.svg"
+            alt="menu"
+          />
+          <img
+            class="close"
+            x-show="showMenu"
+            x-transition:enter="bounce-fade"
+            x-transition:enter-start="small invisible"
+            x-transition:leave="bounce-fade"
+            x-transition:leave-end="small invisible"
+            src="assets/close.svg"
+            alt="close"
+          />
+        </button>
         <div class="links" :class="{'set-height': showMenu}">
           <template x-for="tab in tabs" :key="tab">
             <span>
@@ -185,27 +217,6 @@
           </template>
         </div>
       </div>
-      <button class="menu" @click="showMenu = !showMenu" aria-label="menu">
-        <img
-          x-show="!showMenu"
-          x-transition:enter="bounce-fade"
-          x-transition:enter-start="small invisible"
-          x-transition:leave="bounce-fade"
-          x-transition:leave-end="small invisible"
-          src="assets/menu.svg"
-          alt="menu"
-        />
-        <img
-          class="close"
-          x-show="showMenu"
-          x-transition:enter="bounce-fade"
-          x-transition:enter-start="small invisible"
-          x-transition:leave="bounce-fade"
-          x-transition:leave-end="small invisible"
-          src="assets/close.svg"
-          alt="close"
-        />
-      </button>
     </nav>
 
     <div
@@ -273,12 +284,13 @@
         <div class="projects-heading">
           <h2>Projects</h2>
           <a
+            class="action"
             title="Download CV"
             href="https://tshr.me/cv"
             target="_blank"
             rel="noopener"
           >
-            <button class="action">Download CV</button>
+            Download CV
           </a>
         </div>
         <template x-for="project in projects">
@@ -304,42 +316,33 @@
                   :src="project.image"
                   :alt="'Image for ' + project.name"
                   alt="Project image"
-                  @click="
-                    openImage = project.image
-                    const scrollbarWidth = window.innerWidth - document.body.clientWidth
-                    document.scrollingElement.style.overflow = 'hidden'
-                    document.documentElement.style.setProperty('--padding-right', `${scrollbarWidth}px`)
-                  "
+                  @click="openImage(project.image)"
+                  @keypress="openImage(project.image)"
+                  tabindex="0"
                 />
               </div>
               <div
                 class="modal-background"
-                x-show="openImage == project.image"
+                x-show="openedImage == project.image"
                 x-transition:enter="fade-fast"
                 x-transition:enter-start="invisible"
                 x-transition:leave="fade-fast"
                 x-transition:leave-end="invisible"
-                @click="
-                  openImage = null
-                  document.scrollingElement.style.overflow = ''
-                  document.documentElement.style.setProperty('--padding-right', '0px')
-                "
+                @click="closeImage"
               >
                 <div class="modal-close">
                   <img
                     class="close"
                     src="assets/close.svg"
                     alt="close"
-                    @click="
-                      openImage = null
-                      document.scrollingElement.style.overflow = ''
-                      document.documentElement.style.setProperty('--padding-right', '0px')
-                    "
-                    x-show="openImage == project.image"
+                    @click="closeImage"
+                    @keypress="closeImage"
+                    x-show="openedImage == project.image"
                     x-transition:enter="bounce-fade"
                     x-transition:enter-start="small invisible"
                     x-transition:leave="bounce-fade"
                     x-transition:leave-end="small invisible"
+                    tabindex="0"
                   />
                 </div>
                 <img

@@ -67,6 +67,10 @@ a:active.tab div {
   text-decoration-line: underline;
   color: var(--link-color);
 }
+img {
+  display: block;
+}
+
 .active {
   text-decoration-line: underline;
   color: var(--active-color);
@@ -90,15 +94,17 @@ a:active.tab div {
 .menu {
   display: none;
   position: absolute;
-  top: 23px;
-  right: 23px;
+  width: 32px;
+  height: 32px;
+  top: 16px;
+  right: 16px;
   background-color: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 .menu img {
   position: absolute;
+  top: 0px;
   right: 0px;
   width: 32px;
   height: 32px;
@@ -136,10 +142,10 @@ a:active.tab div {
   color: #333;
   transition-duration: 250ms;
 }
-.action:active {
+.action:focus {
   background-color: white;
   color: #333;
-  transition-duration: 0ms;
+  transition-duration: 250ms;
 }
 .projects-col {
   width: 60%;
@@ -179,7 +185,7 @@ a:active.tab div {
   padding: 0.5rem 0;
 }
 .contact-link {
-  padding-left: 1rem;
+  margin-left: 1rem;
   color: var(--link-color);
 }
 
@@ -328,8 +334,8 @@ hr {
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
   }
-  .tab div {
-    padding: 25px;
+  a.tab div {
+    margin: 20px;
   }
   .logo-container {
     align-self: flex-start;
@@ -345,6 +351,7 @@ hr {
     padding: 0;
   }
   .set-height {
+    padding-top: 20px;
     height: 250px;
   }
   .skills-col {

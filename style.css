@@ -135,18 +135,17 @@ img {
   border-radius: 15rem;
   font-size: 1rem;
   font-weight: 600;
+  transition-property: color, background-color;
   transition-duration: 250ms;
   cursor: pointer;
 }
 .action:hover {
   background-color: white;
   color: #333;
-  transition-duration: 250ms;
 }
 .action:focus {
   background-color: white;
   color: #333;
-  transition-duration: 250ms;
 }
 
 .langs {

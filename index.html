@@ -42,7 +42,11 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
     />
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"
+      async
+      defer
+    ></script>
   </head>
   <style>
     [x-cloak] {
@@ -224,17 +228,16 @@
       x-show="tabData.activeTab === 'about'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
-      x-cloak
     >
       <div class="hero">
-        <h4>Hi, I'm</h4>
+        <p class="subheading">Hi, I'm</p>
         <h1>Tushar Sadhwani</h1>
-        <h4>and I do:</h4>
-        <ul style="margin-left: 1rem; list-style: none">
-          <li><h3>• Python</h3></li>
-          <li><h3>• Flutter</h3></li>
-          <li><h3>• TypeScript</h3></li>
-          <li><h3>• Go</h3></li>
+        <p class="subheading">and I do:</p>
+        <ul class="langs">
+          <li>Python</li>
+          <li>Flutter</li>
+          <li>TypeScript</li>
+          <li>Go</li>
         </ul>
         <div style="padding-top: 30px">
           <button class="action" @click="tabData.activeTab = 'resume'">

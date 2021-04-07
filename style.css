@@ -44,10 +44,11 @@ h3 {
   font-size: 1.8rem;
   line-height: 2.5rem;
 }
-h4 {
+.subheading {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
   font-weight: 100;
+  line-height: 2rem;
 }
 p {
   font-size: 1rem;
@@ -147,6 +148,23 @@ img {
   color: #333;
   transition-duration: 250ms;
 }
+
+.langs {
+  list-style: disc;
+}
+.langs li {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+.langs ::marker {
+  font-size: 1.75rem;
+  content: "•";
+}
+
 .projects-col {
   width: 60%;
 }

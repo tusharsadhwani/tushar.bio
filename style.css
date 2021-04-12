@@ -77,7 +77,8 @@ img {
   color: var(--active-color);
 }
 .navbar {
-  display: inline-flex;
+  width: 100%;
+  display: flex;
   align-items: center;
 }
 .navbar span {
@@ -91,6 +92,14 @@ img {
   display: flex;
   align-items: center;
   text-transform: capitalize;
+}
+.social-btns {
+  display: flex;
+  margin-left: auto;
+}
+.social-btns img {
+  height: 1.8rem;
+  margin-right: 1rem;
 }
 .menu {
   display: none;
@@ -359,6 +368,9 @@ hr {
   }
   .logo-container {
     align-self: flex-start;
+  }
+  .social-btns {
+    display: none;
   }
   .menu {
     display: block;

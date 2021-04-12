@@ -127,6 +127,8 @@
       document.scrollingElement.style.overflow = ""
       document.documentElement.style.setProperty("--padding-right", "0px")
     },
+    githubLink: "https://github.com/tusharsadhwani",
+    gmailLink: "mailto:root@tusharsadhwani.dev",
     contacts: [
       {
         name: "Email",
@@ -219,6 +221,14 @@
               </a>
             </span>
           </template>
+        </div>
+        <div class="social-btns">
+          <a :href="gmailLink" title="Gmail">
+            <img src="assets/images/gmail.svg" alt="Gmail" />
+          </a>
+          <a :href="githubLink" title="GitHub">
+            <img src="assets/images/github.svg" alt="GitHub" />
+          </a>
         </div>
       </div>
     </nav>

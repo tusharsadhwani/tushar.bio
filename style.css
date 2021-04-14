@@ -378,6 +378,11 @@ hr {
   .menu {
     display: block;
   }
+
+  .main {
+    padding: 1rem;
+  }
+
   .project {
     flex-direction: column;
   }

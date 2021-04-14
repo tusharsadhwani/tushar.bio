@@ -96,10 +96,13 @@ img {
 .social-btns {
   display: flex;
   margin-left: auto;
+  transition: opacity 0.3s;
+}
+.social-btns > * {
+  margin-right: 1rem;
 }
 .social-btns img {
   height: 1.8rem;
-  margin-right: 1rem;
 }
 .menu {
   display: none;
@@ -421,6 +424,7 @@ hr {
 }
 .invisible {
   opacity: 0%;
+  pointer-events: none;
 }
 .visible {
   opacity: 100%;

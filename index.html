@@ -58,6 +58,7 @@
     tabs: ["about", "resume", "contact"],
     tabData: {},
     showMenu: false,
+    hideSocialButtons: false,
     skills: [
       {
         name: "Python",
@@ -222,7 +223,11 @@
             </span>
           </template>
         </div>
-        <div class="social-btns">
+        <div
+          class="social-btns"
+          :class="{'invisible': hideSocialButtons}"
+          @scroll.window="hideSocialButtons = window.scrollY > 40"
+        >
           <a :href="gmailLink" title="Gmail">
             <img src="assets/images/gmail.svg" alt="Gmail" />
           </a>

@@ -60,6 +60,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   z-index: 1;
+  pointer-events: none;
+}
+nav > * {
+  pointer-events: all;
+}
+nav span {
+  padding-right: 3rem;
 }
 a.tab div {
   font-size: 1.33rem;
@@ -75,14 +82,6 @@ img {
 .active {
   text-decoration-line: underline;
   color: var(--active-color);
-}
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.navbar span {
-  padding-right: 3rem;
 }
 .logo {
   margin: 0.66rem;
@@ -349,11 +348,11 @@ hr {
   border-radius: 0.1rem;
 }
 @media (max-width: 700px) {
-  .navbar {
+  nav {
     flex-direction: column;
     width: 100%;
   }
-  .navbar span {
+  nav span {
     padding: 0;
   }
   .links {

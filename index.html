@@ -175,66 +175,64 @@
     "
   >
     <nav>
-      <div class="navbar">
-        <span class="logo-container">
-          <a title="Home" href="/">
-            <img class="logo" src="assets/ts.svg" alt="TS" />
-          </a>
-        </span>
-        <button class="menu" @click="showMenu = !showMenu" aria-label="menu">
-          <img
-            x-show="!showMenu"
-            x-transition:enter="bounce-fade"
-            x-transition:enter-start="small invisible"
-            x-transition:leave="bounce-fade"
-            x-transition:leave-end="small invisible"
-            src="assets/menu.svg"
-            alt="menu"
-          />
-          <img
-            class="close"
-            x-show="showMenu"
-            x-transition:enter="bounce-fade"
-            x-transition:enter-start="small invisible"
-            x-transition:leave="bounce-fade"
-            x-transition:leave-end="small invisible"
-            src="assets/close.svg"
-            alt="close"
-          />
-        </button>
-        <div class="links" :class="{'set-height': showMenu}">
-          <template x-for="tab in tabs" :key="tab">
-            <span>
-              <a
-                title="Navbar Tab"
-                :title="tab"
-                class="tab"
-                :href="`#${tab}`"
-                @click="
+      <span class="logo-container">
+        <a title="Home" href="/">
+          <img class="logo" src="assets/ts.svg" alt="TS" />
+        </a>
+      </span>
+      <button class="menu" @click="showMenu = !showMenu" aria-label="menu">
+        <img
+          x-show="!showMenu"
+          x-transition:enter="bounce-fade"
+          x-transition:enter-start="small invisible"
+          x-transition:leave="bounce-fade"
+          x-transition:leave-end="small invisible"
+          src="assets/menu.svg"
+          alt="menu"
+        />
+        <img
+          class="close"
+          x-show="showMenu"
+          x-transition:enter="bounce-fade"
+          x-transition:enter-start="small invisible"
+          x-transition:leave="bounce-fade"
+          x-transition:leave-end="small invisible"
+          src="assets/close.svg"
+          alt="close"
+        />
+      </button>
+      <div class="links" :class="{'set-height': showMenu}">
+        <template x-for="tab in tabs" :key="tab">
+          <span>
+            <a
+              title="Navbar Tab"
+              :title="tab"
+              class="tab"
+              :href="`#${tab}`"
+              @click="
                   tabData.activeTab = tab
                   showMenu = false
                 "
-              >
-                <div
-                  x-text="tab"
-                  :class="{'active': tab === tabData.activeTab}"
-                ></div>
-              </a>
-            </span>
-          </template>
-        </div>
-        <div
-          class="social-btns"
-          :class="{'invisible': hideSocialButtons}"
-          @scroll.window="hideSocialButtons = window.scrollY > 40"
-        >
-          <a :href="gmailLink" title="Gmail">
-            <img src="assets/images/gmail.svg" alt="Gmail" />
-          </a>
-          <a :href="githubLink" title="GitHub">
-            <img src="assets/images/github.svg" alt="GitHub" />
-          </a>
-        </div>
+            >
+              <div
+                x-text="tab"
+                :class="{'active': tab === tabData.activeTab}"
+              ></div>
+            </a>
+          </span>
+        </template>
+      </div>
+      <div
+        class="social-btns"
+        :class="{'invisible': hideSocialButtons}"
+        @scroll.window="hideSocialButtons = window.scrollY > 40"
+      >
+        <a :href="gmailLink" title="Gmail">
+          <img src="assets/images/gmail.svg" alt="Gmail" />
+        </a>
+        <a :href="githubLink" title="GitHub">
+          <img src="assets/images/github.svg" alt="GitHub" />
+        </a>
       </div>
     </nav>
 

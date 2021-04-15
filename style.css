@@ -112,6 +112,7 @@ img {
   right: 16px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .menu:focus {
   outline-offset: 0.2rem;

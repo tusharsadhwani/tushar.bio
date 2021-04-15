@@ -58,7 +58,6 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 1;
   pointer-events: none;
 }
@@ -95,7 +94,6 @@ img {
 .social-btns {
   display: flex;
   margin-left: auto;
-  transition: opacity 0.3s;
 }
 .social-btns > * {
   margin-right: 1rem;

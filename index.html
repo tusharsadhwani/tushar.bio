@@ -231,7 +231,11 @@
       </div>
       <div
         class="social-btns"
-        :class="{'invisible': hideSocialButtons}"
+        x-show="!hideSocialButtons"
+        x-transition:enter="fade-fast"
+        x-transition:enter-start="invisible"
+        x-transition:leave="fade-fast"
+        x-transition:leave-end="invisible"
         @scroll.window="hideSocialButtons = window.scrollY > 40"
       >
         <a :href="gmailLink" title="Gmail">

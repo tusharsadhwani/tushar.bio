@@ -180,7 +180,14 @@
           <img class="logo" src="assets/ts.svg" alt="TS" />
         </a>
       </span>
-      <button class="menu" @click="showMenu = !showMenu" aria-label="menu">
+      <button
+        class="menu"
+        @click="
+          $event.target.blur()
+          showMenu = !showMenu
+        "
+        aria-label="menu"
+      >
         <img
           x-show="!showMenu"
           x-transition:enter="bounce-fade"

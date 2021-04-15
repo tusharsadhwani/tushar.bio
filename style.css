@@ -124,6 +124,7 @@ img {
   right: 0px;
   width: 32px;
   height: 32px;
+  pointer-events: none;
 }
 .close {
   padding: 0.1rem;

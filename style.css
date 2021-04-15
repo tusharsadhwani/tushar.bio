@@ -432,6 +432,7 @@ hr {
 .invisible {
   opacity: 0%;
   pointer-events: none;
+  visibility: hidden;
 }
 .visible {
   opacity: 100%;

@@ -328,6 +328,7 @@ img {
   max-height: 26rem;
   max-width: 22rem;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 .project-img-open {
   max-height: 80%;

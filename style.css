@@ -358,13 +358,16 @@ hr {
   .links {
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
     width: 100%;
     height: 0px;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.4);
     transition-property: height;
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
+  }
+  .links span:first-of-type {
+    padding-top: 20px;
   }
   a.tab div {
     margin: 20px;
@@ -391,7 +394,6 @@ hr {
     padding: 0;
   }
   .set-height {
-    padding-top: 20px;
     height: 250px;
   }
   .skills-col {

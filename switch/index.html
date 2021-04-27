@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>"
+    />
+    <link rel="stylesheet" href="switch.css" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <div id="toggles">
+      <input type="checkbox" name="switch1" id="switch1" class="toggle" checked onclick="onSwitch(event)" />
+      <label for="switch1" class="toggle-label" data-off="Work" data-on="Work"></label>
+
+      <input type="checkbox" name="switch2" id="switch2" class="toggle" checked onclick="onSwitch(event)" />
+      <label for="switch2" class="toggle-label" data-off="Sleep" data-on="Sleep"></label>
+
+      <input type="checkbox" name="switch3" id="switch3" class="toggle" onclick="onSwitch(event)" />
+      <label for="switch3" class="toggle-label" data-off="Social Life" data-on="Social Life"></label>
+
+      <script src="switch.js"></script>
+    </div>
+  </body>
+</html>

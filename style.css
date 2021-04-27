@@ -230,7 +230,7 @@ img {
     padding-bottom: 30px;
   }
   .skills-col {
-    max-width: 500px;
+    max-width: 450px;
   }
   .contact-section {
     width: 100%;
@@ -345,6 +345,7 @@ img {
 hr {
   width: 60%;
   margin: 2rem auto;
+  border-style: solid;
   border-radius: 0.1rem;
 }
 @media (max-width: 700px) {
@@ -469,7 +470,7 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   width: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.25);
   border-radius: 1rem;
   border: 0.4rem solid var(--background-color);
 }

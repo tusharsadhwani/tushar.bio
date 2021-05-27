@@ -182,7 +182,7 @@
       tabData.activeTab = tabs.find(tab => location.hash === `#${tab}`) ?? tabs[0]
       window.addEventListener('popstate', () => {
         tabData.activeTab = tabs.find(tab => location.hash === `#${tab}`) ?? tabs[0]
-      });
+      })
     "
   >
     <nav>

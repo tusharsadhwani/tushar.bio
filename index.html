@@ -180,6 +180,9 @@
         }
       })
       tabData.activeTab = tabs.find(tab => location.hash === `#${tab}`) ?? tabs[0]
+      window.addEventListener('popstate', () => {
+        tabData.activeTab = tabs.find(tab => location.hash === `#${tab}`) ?? tabs[0]
+      });
     "
   >
     <nav>
@@ -219,16 +222,7 @@
       <div class="links" :class="{'set-height': showMenu}">
         <template x-for="tab in tabs" :key="tab">
           <span>
-            <a
-              title="Navbar Tab"
-              :title="tab"
-              class="tab"
-              :href="`#${tab}`"
-              @click="
-                  tabData.activeTab = tab
-                  showMenu = false
-                "
-            >
+            <a title="Navbar Tab" :title="tab" class="tab" :href="`#${tab}`">
               <div
                 x-text="tab"
                 :class="{'active': tab === tabData.activeTab}"

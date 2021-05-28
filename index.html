@@ -165,6 +165,12 @@
         label: "twitch.tv/drunktimelord",
       },
     ],
+    quotes: [
+      "This website is not minified/bundled. Check its source code!",
+      "Browsers really have an API for everything.",
+      "Making these quotes responsive was an absolute nightmare.",
+      "If you&apos;re reading this, you&apos;re awesome.",
+    ],
   }'
     x-init="
       tabData = new Proxy(tabData, {
@@ -183,6 +189,31 @@
       window.addEventListener('popstate', () => {
         tabData.activeTab = tabs.find(tab => location.hash === `#${tab}`) ?? tabs[0]
       })
+
+      const repositionFooter = () => {
+        const hero = document.querySelector('.hero')
+        const footer = document.querySelector('footer')
+        if (hero.offsetTop + hero.offsetHeight + footer.offsetHeight < window.innerHeight) {
+          footer.style.position = 'absolute'
+          if (window.innerWidth > 600) {
+            footer.style.left = '50%'
+            footer.style.transform = 'translate(-50%, 0)'
+          } else {
+            footer.style.left = '0'
+            footer.style.transform = null
+          }
+        } else {
+          footer.style.position = 'static'
+          footer.style.transform = null
+        }
+      }
+      repositionFooter()
+
+      const footerObserver = new ResizeObserver(() => {
+        console.log('ok')
+        repositionFooter()
+      })
+      footerObserver.observe(document.documentElement)
     "
   >
     <nav>
@@ -250,27 +281,35 @@
     </nav>
 
     <div
-      class="main flex"
       x-show="tabData.activeTab === 'about'"
       x-transition:enter="fade"
       x-transition:enter-start="invisible"
     >
-      <div class="hero">
-        <p class="subheading">Hi, I'm</p>
-        <h1>Tushar Sadhwani</h1>
-        <p class="subheading">and I do:</p>
-        <ul class="langs">
-          <li>Python</li>
-          <li>Flutter</li>
-          <li>TypeScript</li>
-          <li>Go</li>
-        </ul>
-        <div style="padding-top: 30px">
-          <button class="action" @click="tabData.activeTab = 'resume'">
-            View Resume
-          </button>
+      <div class="main flex">
+        <div class="hero">
+          <p class="subheading">Hi, I'm</p>
+          <h1>Tushar Sadhwani</h1>
+          <p class="subheading">and I do:</p>
+          <ul class="langs">
+            <li>Python</li>
+            <li>Flutter</li>
+            <li>TypeScript</li>
+            <li>Go</li>
+          </ul>
+          <div style="padding-top: 2rem; padding-bottom: 0.5rem">
+            <button class="action" @click="tabData.activeTab = 'resume'">
+              View Resume
+            </button>
+          </div>
         </div>
       </div>
+      <footer>
+        <marquee class="quotes">
+          <template x-for="quote in quotes">
+            <p x-text="quote"></p>
+          </template>
+        </marquee>
+      </footer>
     </div>
 
     <div

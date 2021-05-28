@@ -139,7 +139,7 @@ img {
   justify-content: space-between;
 }
 .action {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   height: 3.33rem;
   padding: 0.5rem 1rem;
@@ -153,11 +153,13 @@ img {
   transition-duration: 250ms;
   cursor: pointer;
 }
-.action:hover {
+.action:hover,
+action > *:hover {
   background-color: white;
   color: #333;
 }
-.action:focus {
+.action:focus,
+action > *:focus {
   background-color: white;
   color: #333;
 }

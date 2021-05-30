@@ -426,7 +426,7 @@ footer {
   margin-right: 6rem;
   position: relative;
   animation: scroll-left infinite linear;
-  animation-duration: var(--quotes-scroll-duration, 1s);
+  animation-duration: var(--quotes-scroll-duration, 99999s);
 }
 .quote:last-child {
   margin: 0;

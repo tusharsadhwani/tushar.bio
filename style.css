@@ -317,7 +317,7 @@ action > *:focus {
   flex: 1;
   align-self: flex-start;
   padding-right: 1rem;
-  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 .project-img-container {
   min-width: 15rem;

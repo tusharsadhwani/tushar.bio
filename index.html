@@ -211,6 +211,15 @@
 
       const footerObserver = new ResizeObserver(repositionFooter)
       footerObserver.observe(document.documentElement)
+
+      setTimeout(() => {
+        const quotes = document.querySelector('.quotes')
+        document.documentElement.style.setProperty('--quotes-scroll-width', `${quotes.scrollWidth}px`)
+        document.documentElement.style.setProperty(
+          '--quotes-scroll-duration',
+          `${Math.floor(quotes.scrollWidth / quotes.offsetWidth * 10)}s`
+        )
+      }, 0)
     "
   >
     <nav>
@@ -299,11 +308,11 @@
         </div>
       </div>
       <footer>
-        <marquee class="quotes">
+        <div class="quotes">
           <template x-for="quote in quotes">
-            <p x-text="quote"></p>
+            <p class="quote" x-text="quote"></p>
           </template>
-        </marquee>
+        </div>
       </footer>
     </div>
 

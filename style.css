@@ -416,12 +416,28 @@ footer {
   /* Absolute style */
   bottom: 0;
 }
-.quotes p {
+.quotes {
+  display: flex;
+  overflow-x: hidden;
+}
+.quote {
+  flex-shrink: 0;
   display: inline-block;
   margin-right: 6rem;
+  position: relative;
+  animation: scroll-left infinite linear;
+  animation-duration: var(--quotes-scroll-duration);
 }
-.quotes p:last-child {
+.quote:last-child {
   margin: 0;
+}
+@keyframes scroll-left {
+  from {
+    left: 600px;
+  }
+  to {
+    left: calc(-1 * var(--quotes-scroll-width));
+  }
 }
 
 .coffee {

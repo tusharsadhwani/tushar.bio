@@ -274,7 +274,13 @@
       <div class="links" :class="{'set-height': showMenu}">
         <template x-for="tab in tabs" :key="tab">
           <span>
-            <a title="Navbar Tab" :title="tab" class="tab" :href="`#${tab}`">
+            <a
+              title="Navbar Tab"
+              :title="tab"
+              class="tab"
+              :href="`#${tab}`"
+              @click="showMenu = false"
+            >
               <div
                 x-text="tab"
                 :class="{'active': tab === tabData.activeTab}"

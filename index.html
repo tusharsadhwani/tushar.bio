@@ -209,10 +209,7 @@
       }
       repositionFooter()
 
-      const footerObserver = new ResizeObserver(() => {
-        console.log('ok')
-        repositionFooter()
-      })
+      const footerObserver = new ResizeObserver(repositionFooter)
       footerObserver.observe(document.documentElement)
     "
   >

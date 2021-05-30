@@ -433,7 +433,7 @@ footer {
 }
 @keyframes scroll-left {
   from {
-    left: 600px;
+    left: var(--footer-width, 600px);
   }
   to {
     left: calc(-1 * var(--quotes-scroll-width));

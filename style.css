@@ -333,7 +333,7 @@ action > *:focus {
 }
 .project-img-open {
   max-height: 80%;
-  max-width: 70%;
+  max-width: 100%;
 }
 .project-link {
   padding: 1rem 0;

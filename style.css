@@ -483,6 +483,7 @@ footer {
   width: 100%;
   max-width: 600px;
   line-height: 1;
+  padding-bottom: 0.4em;
   /* Static style */
   margin: auto;
   /* Absolute style */

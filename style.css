@@ -78,6 +78,78 @@ img {
   display: block;
 }
 
+.name {
+  counter-reset: name;
+}
+.typewriter {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+  counter-increment: name;
+}
+.second {
+  --index: 1;
+}
+.typewriter::before {
+  content: attr(--text);
+  color: white;
+  position: absolute;
+  clip-path: inset(0 100% 0 0);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: typewriter 0.5s forwards linear;
+  animation-delay: calc(0.5s + 0.5s * var(--index, 0));
+}
+@keyframes typewriter {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.typewriter::after {
+  content: "";
+  position: absolute;
+  top: 0.025em;
+  bottom: 0.15em;
+  left: 0;
+  width: 0.06em;
+  animation: cursor 0.5s forwards linear, hidecursor 0.5s forwards linear;
+  animation-delay: calc(0.5s + 0.5s * var(--index, 0));
+}
+.second::after {
+  animation: cursor 0.5s forwards linear, blink 0.6s ease-in infinite alternate;
+  animation-delay: calc(0.5s + 0.5s * var(--index, 0));
+}
+@keyframes cursor {
+  0% {
+    background-color: transparent;
+  }
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: white;
+    left: 100%;
+  }
+}
+@keyframes hidecursor {
+  99.9% {
+    background-color: white;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes blink {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
 .active {
   text-decoration-line: underline;
   color: var(--active-color);

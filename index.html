@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <title>Tushar Sadhwani</title>
-    <meta
-      name="description"
-      content="Tushar Sadhwani • Resume and Portfolio website."
-    />
+    <meta name="description" content="Tushar Sadhwani • Resume and Portfolio website." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Tushar Sadhwani" />
     <meta property="og:locale" content="en_IN" />
@@ -286,10 +283,7 @@
               :href="`#${tab}`"
               @click="showMenu = false"
             >
-              <div
-                x-text="tab"
-                :class="{'active': tab === tabData.activeTab}"
-              ></div>
+              <div x-text="tab" :class="{'active': tab === tabData.activeTab}"></div>
             </a>
           </span>
         </template>
@@ -320,7 +314,10 @@
       <div class="main flex">
         <div class="hero">
           <p class="subheading">Hi, I'm</p>
-          <h1>Tushar Sadhwani</h1>
+          <h1 class="name">
+            <span class="typewriter" --text="Tushar ">Tushar </span>
+            <span class="typewriter second" --text="Sadhwani">Sadhwani</span>
+          </h1>
           <p class="subheading">and I do:</p>
           <ul class="langs">
             <li>Python</li>

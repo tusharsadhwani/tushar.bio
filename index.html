@@ -231,7 +231,10 @@
       setTimeout(() => {
         const quotes = document.querySelector('.quotes')
         document.documentElement.style.setProperty('--footer-width', `${quotes.offsetWidth}px`)
-        document.documentElement.style.setProperty('--quotes-scroll-width', `${quotes.scrollWidth}px`)
+        document.documentElement.style.setProperty(
+          '--quotes-scroll-width',
+          `${quotes.scrollWidth - quotes.offsetWidth}px`
+        )
         document.documentElement.style.setProperty(
           '--quotes-scroll-duration',
           `${Math.floor(quotes.scrollWidth * 15)}ms`

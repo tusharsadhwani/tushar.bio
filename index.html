@@ -181,12 +181,6 @@
         label: "twitch.tv/drunktimelord",
       },
     ],
-    quotes: [
-      "This website is not minified/bundled. Check its source code!",
-      "Browsers really have an API for everything.",
-      "Making these quotes responsive was an absolute nightmare.",
-      "If you&apos;re reading this, you&apos;re awesome.",
-    ],
   }'
     x-init="
       tabData = new Proxy(tabData, {
@@ -227,19 +221,6 @@
 
       const footerObserver = new ResizeObserver(repositionFooter)
       footerObserver.observe(document.documentElement)
-
-      setTimeout(() => {
-        const quotes = document.querySelector('.quotes')
-        document.documentElement.style.setProperty('--footer-width', `${quotes.offsetWidth}px`)
-        document.documentElement.style.setProperty(
-          '--quotes-scroll-width',
-          `${quotes.scrollWidth - quotes.offsetWidth}px`
-        )
-        document.documentElement.style.setProperty(
-          '--quotes-scroll-duration',
-          `${Math.floor(quotes.scrollWidth * 15)}ms`
-        )
-      }, 0)
     "
   >
     <nav>
@@ -333,7 +314,28 @@
           </div>
         </div>
       </div>
-      <footer>
+      <footer
+        x-data='{
+          quotes: [
+            "This website is not minified/bundled. Check its source code!",
+            "Browsers really have an API for everything.",
+            "Making these quotes responsive was an absolute nightmare.",
+            "If you&apos;re reading this, you&apos;re awesome.",
+          ],
+        }'
+        x-init="() => {
+          const quotes = document.querySelector('.quotes')
+          document.documentElement.style.setProperty('--footer-width', `${quotes.offsetWidth}px`)
+          document.documentElement.style.setProperty(
+            '--quotes-scroll-width',
+            `${quotes.scrollWidth - quotes.offsetWidth}px`
+          )
+          document.documentElement.style.setProperty(
+            '--quotes-scroll-duration',
+            `${Math.floor(quotes.scrollWidth * 15)}ms`
+          )
+        }"
+      >
         <div class="quotes">
           <template x-for="quote in quotes">
             <p class="quote" x-text="quote"></p>

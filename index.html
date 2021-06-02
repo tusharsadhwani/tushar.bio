@@ -323,7 +323,7 @@
             "If you&apos;re reading this, you&apos;re awesome.",
           ],
         }'
-        x-init="() => {
+        x-init="$nextTick(() => {
           const quotes = document.querySelector('.quotes')
           document.documentElement.style.setProperty('--footer-width', `${quotes.offsetWidth}px`)
           document.documentElement.style.setProperty(
@@ -334,7 +334,7 @@
             '--quotes-scroll-duration',
             `${Math.floor(quotes.scrollWidth * 15)}ms`
           )
-        }"
+        })"
       >
         <div class="quotes">
           <template x-for="quote in quotes">

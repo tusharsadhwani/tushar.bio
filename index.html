@@ -61,6 +61,7 @@
   </style>
   <body
     x-data='{
+    isMobile: false,
     tabs: ["about", "resume", "contact"],
     tabData: {},
     showMenu: false,
@@ -148,8 +149,6 @@
       document.scrollingElement.style.overflow = ""
       document.documentElement.style.setProperty("--padding-right", "0px")
     },
-    githubLink: "https://github.com/tusharsadhwani",
-    gmailLink: "mailto:root@tusharsadhwani.dev",
     contacts: [
       {
         name: "Email",
@@ -194,6 +193,8 @@
     ],
   }'
     x-init="
+      isMobile = window.innerWidth <= 700
+
       tabData = new Proxy(tabData, {
         set: (tabData, key, value) => {
           tabData[key] = value
@@ -233,15 +234,17 @@
       const footerObserver = new ResizeObserver(repositionFooter)
       footerObserver.observe(document.documentElement)
     "
+    @resize.window="isMobile = window.innerWidth <= 700"
   >
-    <nav>
+    <nav :class="{'flex-col': isMobile}">
       <span class="logo-container">
         <a title="Home" href="/">
           <img class="logo" src="assets/ts.svg" alt="TS" />
         </a>
       </span>
-      <button
+      <div
         class="menu"
+        :class="{'unhide': isMobile}"
         @click="
           $event.target.blur()
           showMenu = !showMenu
@@ -267,8 +270,8 @@
           src="assets/close.svg"
           alt="close"
         />
-      </button>
-      <div class="links" :class="{'set-height': showMenu}">
+      </div>
+      <div class="links" :class="{'set-height': showMenu, 'full-width': isMobile}">
         <template x-for="tab in tabs" :key="tab">
           <span>
             <a
@@ -285,6 +288,7 @@
       </div>
       <div
         class="social-btns"
+        :class="{'hide': isMobile}"
         x-show="!hideSocialButtons"
         x-transition:enter="fade-fast"
         x-transition:enter-start="invisible"
@@ -292,10 +296,10 @@
         x-transition:leave-end="invisible"
         @scroll.window="hideSocialButtons = window.scrollY > 40"
       >
-        <a :href="gmailLink" title="Gmail">
-          <img src="assets/images/gmail.svg" alt="Gmail" />
+        <a href="mailto:root@tusharsadhwani.dev" title="Email">
+          <img src="assets/images/gmail.svg" alt="Email" />
         </a>
-        <a :href="githubLink" title="GitHub">
+        <a href="https://github.com/tusharsadhwani" title="GitHub">
           <img src="assets/images/github.svg" alt="GitHub" />
         </a>
       </div>
@@ -321,7 +325,7 @@
             <li>Go</li>
           </ul>
           <div style="padding-top: 2rem; padding-bottom: 0.5rem">
-            <a class="action" href="#resume">View Resume</a>
+            <a class="action" href="https://tshr.me/cv" :href="'#resume'">View Resume</a>
           </div>
         </div>
       </div>

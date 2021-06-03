@@ -94,6 +94,7 @@ div.unhide {
   display: inline-block;
   position: relative;
   color: transparent;
+  --index: 0;
 }
 .second {
   --index: 1;
@@ -155,6 +156,16 @@ div.unhide {
   }
   to {
     background-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter {
+    color: unset;
+  }
+  .typewriter::before,
+  .typewriter::after {
+    animation: none;
   }
 }
 

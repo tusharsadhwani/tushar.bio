@@ -78,14 +78,10 @@ img {
   display: block;
 }
 
-.name {
-  counter-reset: name;
-}
 .typewriter {
   display: inline-block;
   position: relative;
   color: transparent;
-  counter-increment: name;
 }
 .second {
   --index: 1;

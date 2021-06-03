@@ -242,7 +242,7 @@ action > *:focus {
 .langs li {
   color: var(--primary-color);
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 2.5rem;
   margin-left: 1.5rem;
   padding-left: 0.5rem;
@@ -594,7 +594,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 .bmc-text {
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 0.5rem;
   font-size: 1rem;
 }

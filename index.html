@@ -60,138 +60,40 @@
     }
   </style>
   <body
-    x-data='{
-    isMobile: false,
-    tabs: ["about", "resume", "contact"],
-    tabData: {},
-    showMenu: false,
-    hideSocialButtons: false,
-    skills: [
-      {
-        name: "Python",
-        score: 90,
-      },
-      {
-        name: "Flutter",
-        score: 80,
-      },
-      {
-        name: "TypeScript",
-        score: 75,
-      },
-      {
-        name: "React",
-        score: 75,
-      },
-      {
-        name: "Go",
-        score: 70,
-      },
-      {
-        name: "SQL",
-        score: 70,
-      },
-    ],
-    showSkills: false,
-    projects: [
-      {
-        name: "InstaChat",
-        description:
-          "A working replica of Instagram DMs and stories, written in Flutter and Go.",
-        link: "https://github.com/tusharsadhwani/instachat",
-        image: "assets/images/instachat.webp",
-      },
-      {
-        name: "zxpy",
-        description:
-          "Supercharge your shell scripts by using Python, but with simple, intuitive integration of bash commands and pipes.",
-        link: "https://github.com/tusharsadhwani/zxpy",
-        image: "assets/images/zxpy.webp",
-      },
-      {
-        name: "python-leetcode-runner",
-        description:
-          "Write and test your LeetCode solutions on your own machine.",
-        link: "https://github.com/tusharsadhwani/python_leetcode_runner",
-        image: "assets/images/pyleet.webp",
-      },
-      {
-        name: "2doku",
-        description:
-          "A live 2-player sudoku game, built using Flutter and Firebase.",
-        link: "https://github.com/tusharsadhwani/2doku",
-        image: "assets/images/sudoku.webp",
-      },
-      {
-        name: "Python Snippets",
-        description:
-          "A website containing curated python code examples, that run directly in your browser.",
-        link: "https://pysnippets.xyz",
-        image: "assets/images/pysnippets.webp",
-      },
-      {
-        name: "Sineline",
-        description:
-          "A lightweight remake of Android game \"Sine Line\" from Third State Studio.",
-        link: "https://tusharsadhwani.dev/sineline",
-        image: "assets/images/sineline.webp",
-      },
-    ],
-    openedImage: null,
-    openImage(newImage) {
-      this.openedImage = newImage
-      const scrollbarWidth = window.innerWidth - document.body.clientWidth
-      document.scrollingElement.style.overflow = "hidden"
-      document.documentElement.style.setProperty("--padding-right", `${scrollbarWidth}px`)
-    },
-    closeImage() {
-      this.openedImage = null
-      document.scrollingElement.style.overflow = ""
-      document.documentElement.style.setProperty("--padding-right", "0px")
-    },
-    contacts: [
-      {
-        name: "Email",
-        link: "mailto:root@tusharsadhwani.dev",
-        label: "root@tusharsadhwani.dev",
-      },
-      {
-        name: "Blog",
-        link: "https://dev.to/tusharsadhwani",
-        label: "dev.to/tusharsadhwani",
-      },
-      {
-        name: "GitHub",
-        link: "https://github.com/tusharsadhwani",
-        label: "github.com/tusharsadhwani",
-      },
-      {
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/tusharsadhwani/",
-        label: "tusharsadhwani",
-      },
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharsadhwani",
-        label: "@tusharsadhwani",
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/sadhlife",
-        label: "@sadhlife",
-      },
-      {
-        name: "Instagram",
-        link: "https://instagram.com/sadhlife",
-        label: "@sadhlife",
-      },
-      {
-        name: "Twitch",
-        link: "https://twitch.tv/drunktimelord",
-        label: "twitch.tv/drunktimelord",
-      },
-    ],
-  }'
+    x-data="{
+      isMobile: false,
+      tabs: ['about', 'resume', 'contact'],
+      tabData: {},
+      showMenu: false,
+      hideSocialButtons: false,
+      skills: [
+        {
+          name: 'Python',
+          score: 90,
+        },
+        {
+          name: 'Flutter',
+          score: 80,
+        },
+        {
+          name: 'TypeScript',
+          score: 75,
+        },
+        {
+          name: 'React',
+          score: 75,
+        },
+        {
+          name: 'Go',
+          score: 70,
+        },
+        {
+          name: 'SQL',
+          score: 70,
+        },
+      ],
+      showSkills: false,
+    }"
     x-init="
       isMobile = window.innerWidth <= 700
 
@@ -395,7 +297,67 @@
           </template>
         </div>
       </div>
-      <div class="projects-col">
+      <div
+        class="projects-col"
+        x-data="{
+          projects: [
+            {
+              name: 'InstaChat',
+              description:
+                'A working replica of Instagram DMs and stories, written in Flutter and Go.',
+              link: 'https://github.com/tusharsadhwani/instachat',
+              image: 'assets/images/instachat.webp',
+            },
+            {
+              name: 'zxpy',
+              description:
+                'Supercharge your shell scripts by using Python, but with simple, intuitive integration of bash commands and pipes.',
+              link: 'https://github.com/tusharsadhwani/zxpy',
+              image: 'assets/images/zxpy.webp',
+            },
+            {
+              name: 'python-leetcode-runner',
+              description:
+                'Write and test your LeetCode solutions on your own machine.',
+              link: 'https://github.com/tusharsadhwani/python_leetcode_runner',
+              image: 'assets/images/pyleet.webp',
+            },
+            {
+              name: '2doku',
+              description:
+                'A live 2-player sudoku game, built using Flutter and Firebase.',
+              link: 'https://github.com/tusharsadhwani/2doku',
+              image: 'assets/images/sudoku.webp',
+            },
+            {
+              name: 'Python Snippets',
+              description:
+                'A website containing curated python code examples, that run directly in your browser.',
+              link: 'https://pysnippets.xyz',
+              image: 'assets/images/pysnippets.webp',
+            },
+            {
+              name: 'Sineline',
+              description:
+                'A lightweight remake of Android game &quot;Sine Line&quot; from Third State Studio.',
+              link: 'https://tusharsadhwani.dev/sineline',
+              image: 'assets/images/sineline.webp',
+            },
+          ],
+          openedImage: null,
+          openImage(newImage) {
+            this.openedImage = newImage
+            const scrollbarWidth = window.innerWidth - document.body.clientWidth
+            document.scrollingElement.style.overflow = 'hidden'
+            document.documentElement.style.setProperty('--padding-right', `${scrollbarWidth}px`)
+          },
+          closeImage() {
+            this.openedImage = null
+            document.scrollingElement.style.overflow = ''
+            document.documentElement.style.setProperty('--padding-right', '0px')
+          },
+        }"
+      >
         <div class="projects-heading">
           <h2>Projects</h2>
           <a
@@ -486,7 +448,53 @@
       x-transition:enter-end="visible"
       x-cloak
     >
-      <div class="contact-section">
+      <div
+        class="contact-section"
+        x-data="{
+          contacts: [
+            {
+              name: 'Email',
+              link: 'mailto:root@tusharsadhwani.dev',
+              label: 'root@tusharsadhwani.dev',
+            },
+            {
+              name: 'Blog',
+              link: 'https://dev.to/tusharsadhwani',
+              label: 'dev.to/tusharsadhwani',
+            },
+            {
+              name: 'GitHub',
+              link: 'https://github.com/tusharsadhwani',
+              label: 'github.com/tusharsadhwani',
+            },
+            {
+              name: 'LinkedIn',
+              link: 'https://www.linkedin.com/in/tusharsadhwani/',
+              label: 'tusharsadhwani',
+            },
+            {
+              name: 'Telegram',
+              link: 'https://t.me/tusharsadhwani',
+              label: '@tusharsadhwani',
+            },
+            {
+              name: 'Twitter',
+              link: 'https://twitter.com/sadhlife',
+              label: '@sadhlife',
+            },
+            {
+              name: 'Instagram',
+              link: 'https://instagram.com/sadhlife',
+              label: '@sadhlife',
+            },
+            {
+              name: 'Twitch',
+              link: 'https://twitch.tv/drunktimelord',
+              label: 'twitch.tv/drunktimelord',
+            },
+          ],
+        }"
+      >
         <h2>Links/Contact</h2>
         <div style="padding-top: 30px">
           <table>

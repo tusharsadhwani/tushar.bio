@@ -69,7 +69,7 @@
       skills: [
         {
           name: 'Python',
-          score: 90,
+          score: 95,
         },
         {
           name: 'Flutter',
@@ -80,16 +80,20 @@
           score: 75,
         },
         {
-          name: 'React',
-          score: 75,
-        },
-        {
           name: 'Go',
-          score: 70,
+          score: 50,
         },
         {
           name: 'SQL',
+          score: 30,
+        },
+        {
+          name: 'React',
           score: 70,
+        },
+        {
+          name: 'CSS',
+          score: 75,
         },
       ],
       showSkills: false,
@@ -274,9 +278,9 @@
         <div class="skills">
           <div class="skills-legend">
             <div>
-              <p>Noob</p>
-              <div style="flex-grow: 1"></div>
-              <p>Pro</p>
+              <p style="flex-grow: 1">Familiar</p>
+              <p style="flex-grow: 1">Intermediate</p>
+              <p>Proficient</p>
             </div>
           </div>
           <template x-for="skill in skills">

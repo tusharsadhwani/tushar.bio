@@ -358,6 +358,12 @@ action > *:focus {
   border-radius: 1rem;
   background-color: white;
 }
+.p30 {
+  width: calc(30% - 1rem);
+}
+.p50 {
+  width: calc(50% - 1rem);
+}
 .p70 {
   width: calc(70% - 1rem);
 }
@@ -367,18 +373,15 @@ action > *:focus {
 .p80 {
   width: calc(80% - 1rem);
 }
-.p90 {
-  width: calc(90% - 1rem);
+.p95 {
+  width: calc(95% - 1rem);
 }
 .skills-legend {
   display: flex;
   justify-content: flex-end;
   margin: 0 0.5rem;
 }
-.skills-legend > :first-child {
-  width: 35%;
-}
-.skills-legend > :last-child {
+.skills-legend > * {
   width: 65%;
   display: flex;
   align-items: center;

@@ -290,6 +290,8 @@ action > *:focus {
 
 .projects-col {
   width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 .skills-col {
   width: 30%;

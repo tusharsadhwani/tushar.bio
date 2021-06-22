@@ -3,6 +3,7 @@
   --primary-color: rgb(75, 50, 225);
   --link-color: rgb(15, 180, 255);
   --active-color: rgb(255, 54, 218);
+  --subheading-color: rgba(255, 255, 255, 0.7);
   --padding-right: 0px;
 }
 * {
@@ -53,7 +54,7 @@ h3 {
   line-height: 2.5rem;
 }
 .subheading {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--subheading-color);
   font-size: 1.5rem;
   font-weight: 100;
   line-height: 2rem;
@@ -398,9 +399,9 @@ action > *:focus {
   align-items: center;
 }
 .skills-legend p {
+  color: var(--subheading-color);
   font-size: 0.8rem;
   line-height: 0.6rem;
-  opacity: 0.7;
 }
 
 .projects-heading {
@@ -455,10 +456,12 @@ action > *:focus {
   text-decoration-line: underline;
 }
 hr {
-  width: 60%;
+  width: 50%;
+  color: var(--subheading-color);
   margin: 2rem auto;
   border-style: solid;
   border-radius: 0.1rem;
+  border-top: 0;
 }
 @media (max-width: 700px) {
   nav {

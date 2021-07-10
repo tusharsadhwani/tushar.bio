@@ -450,6 +450,7 @@ action > *:focus {
 }
 .project-link {
   padding: 1rem 0;
+  word-wrap: break-word;
 }
 .project-link a {
   color: var(--link-color);

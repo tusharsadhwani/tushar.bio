@@ -2,7 +2,7 @@
 
 The Portfolio website.
 
-<img src="./assets/images/preview.png" title="Demo" alt="Demo" width="500">
+![website](https://user-images.githubusercontent.com/43412083/125842347-f73497d9-306c-4423-9088-8c46ea236c18.png)
 
 ---
 

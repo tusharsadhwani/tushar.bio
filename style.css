@@ -451,7 +451,7 @@ action > *:focus {
   max-height: 80%;
   max-width: 100%;
   min-width: 20%;
-  min-height: 40%;
+  min-height: 20%;
   object-fit: contain;
 }
 .project-link {

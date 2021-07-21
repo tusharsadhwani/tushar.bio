@@ -441,12 +441,18 @@ action > *:focus {
 .project-img {
   max-height: 26rem;
   max-width: 22rem;
+  min-height: 12rem;
+  min-width: 12rem;
+  object-fit: contain;
   border-radius: 0.3rem;
   cursor: pointer;
 }
 .project-img-open {
   max-height: 80%;
   max-width: 100%;
+  min-width: 40%;
+  min-height: 40%;
+  object-fit: contain;
 }
 .project-link {
   padding: 1rem 0;

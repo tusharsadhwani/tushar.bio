@@ -356,14 +356,17 @@
             },
           ],
           openedImage: null,
+          imageZoom: 1,
           openImage(newImage) {
             this.openedImage = newImage
+            this.imageZoom = 1
             const scrollbarWidth = window.innerWidth - document.body.clientWidth
             document.scrollingElement.style.overflow = 'hidden'
             document.documentElement.style.setProperty('--padding-right', `${scrollbarWidth}px`)
           },
           closeImage() {
             this.openedImage = null
+            this.imageZoom = 1
             document.scrollingElement.style.overflow = ''
             document.documentElement.style.setProperty('--padding-right', '0px')
           },
@@ -440,8 +443,20 @@
                   :src="project.image"
                   alt="Project image"
                   :alt="'Image for ' + project.name"
+                  :style="`transform: scale(${imageZoom})`"
                   @click="event.stopPropagation()"
                   loading="lazy"
+                />
+                <input
+                  type="range"
+                  name="zoom"
+                  id="zoom"
+                  class="zoom"
+                  x-model="imageZoom"
+                  min="1"
+                  max="2"
+                  step="0.01"
+                  @click.stop
                 />
               </div>
             </div>

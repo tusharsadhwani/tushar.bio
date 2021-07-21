@@ -660,10 +660,17 @@ body::-webkit-scrollbar-thumb {
 }
 .modal-close {
   position: absolute;
+  z-index: 2;
   top: 2rem;
   right: 2rem;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.zoom {
+  position: fixed;
+  bottom: 5%;
+  z-index: 1;
+  width: 10rem;
 }

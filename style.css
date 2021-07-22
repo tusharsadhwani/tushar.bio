@@ -672,7 +672,7 @@ body::-webkit-scrollbar-thumb {
 .zoom {
   position: fixed;
   bottom: 5%;
-  z-index: 1;
+  z-index: 2;
   width: 10rem;
 }
 

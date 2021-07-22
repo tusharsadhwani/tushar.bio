@@ -480,6 +480,23 @@
                     offsetX = dragX + prevOffsetX
                     offsetY = dragY + prevOffsetY
                   "
+                  @touchstart="
+                    dragging = true
+                    prevPositionX = event.changedTouches[0].screenX
+                    prevPositionY = event.changedTouches[0].screenY
+                  "
+                  @touchend.window="
+                    dragging = false
+                    prevOffsetX = offsetX
+                    prevOffsetY = offsetY
+                  "
+                  @touchmove.prevent="
+                    if (!dragging) return;
+                    dragX = event.changedTouches[0].screenX - prevPositionX
+                    dragY = event.changedTouches[0].screenY - prevPositionY
+                    offsetX = dragX + prevOffsetX
+                    offsetY = dragY + prevOffsetY
+                  "
                   loading="lazy"
                 />
                 <input

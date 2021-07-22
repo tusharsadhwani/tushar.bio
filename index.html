@@ -357,19 +357,37 @@
           ],
           openedImage: null,
           imageZoom: 1,
+          prevPositionX: 0,
+          prevPositionY: 0,
+          prevOffsetX: 0,
+          prevOffsetY: 0,
+          offsetX: 0,
+          offsetY: 0,
+          dragging: false,
           openImage(newImage) {
             this.openedImage = newImage
-            this.imageZoom = 1
+            this.resetPosition()
+
             const scrollbarWidth = window.innerWidth - document.body.clientWidth
             document.scrollingElement.style.overflow = 'hidden'
             document.documentElement.style.setProperty('--padding-right', `${scrollbarWidth}px`)
           },
           closeImage() {
             this.openedImage = null
-            this.imageZoom = 1
+            setTimeout(this.resetPosition, 200)
+
             document.scrollingElement.style.overflow = ''
             document.documentElement.style.setProperty('--padding-right', '0px')
           },
+          resetPosition() {
+            this.imageZoom = 1
+            this.prevPositionX = 0
+            this.prevPositionY = 0
+            this.prevOffsetX = 0
+            this.prevOffsetY = 0
+            this.offsetX = 0
+            this.offsetY = 0
+          }
         }"
       >
         <div class="projects-heading">
@@ -443,8 +461,25 @@
                   :src="project.image"
                   alt="Project image"
                   :alt="'Image for ' + project.name"
-                  :style="`transform: scale(${imageZoom})`"
-                  @click="event.stopPropagation()"
+                  :style="`transform: translate(${offsetX}px, ${offsetY}px) scale(${imageZoom})`"
+                  @click.stop
+                  @mousedown="
+                    dragging = true
+                    prevPositionX = event.screenX
+                    prevPositionY = event.screenY
+                  "
+                  @mouseup.window="
+                    dragging = false
+                    prevOffsetX = offsetX
+                    prevOffsetY = offsetY
+                  "
+                  @mousemove.window="
+                    if (!dragging) return;
+                    dragX = event.screenX - prevPositionX
+                    dragY = event.screenY - prevPositionY
+                    offsetX = dragX + prevOffsetX
+                    offsetY = dragY + prevOffsetY
+                  "
                   loading="lazy"
                 />
                 <input

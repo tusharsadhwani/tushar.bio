@@ -463,7 +463,7 @@
                   :alt="'Image for ' + project.name"
                   :style="`transform: translate(${offsetX}px, ${offsetY}px) scale(${imageZoom})`"
                   @click.stop
-                  @mousedown="
+                  @mousedown.prevent="
                     dragging = true
                     prevPositionX = event.screenX
                     prevPositionY = event.screenY
@@ -499,6 +499,7 @@
                   "
                   loading="lazy"
                   :loading="'eager'"
+                  draggable="false"
                 />
                 <input
                   type="range"

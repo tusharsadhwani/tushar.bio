@@ -428,6 +428,7 @@
                   @click="openImage(project.image)"
                   @keypress="openImage(project.image)"
                   loading="lazy"
+                  :loading="'eager'"
                   tabindex="0"
                 />
               </div>
@@ -452,7 +453,6 @@
                     x-transition:enter-start="small invisible"
                     x-transition:leave="bounce-fade"
                     x-transition:leave-end="small invisible"
-                    loading="lazy"
                     tabindex="0"
                   />
                 </div>
@@ -498,6 +498,7 @@
                     offsetY = dragY + prevOffsetY
                   "
                   loading="lazy"
+                  :loading="'eager'"
                 />
                 <input
                   type="range"
@@ -616,7 +617,6 @@
           <img
             src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
             alt="Buy me a coffee"
-            loading="lazy"
           />
           <span class="bmc-text">Buy me a coffee</span>
         </a>

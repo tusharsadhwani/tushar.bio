@@ -80,10 +80,6 @@ nav span {
 a.tab div {
   font-size: 1.33rem;
 }
-a:active.tab div {
-  text-decoration-line: underline;
-  color: var(--link-color);
-}
 img {
   display: block;
   user-select: none;
@@ -181,8 +177,18 @@ div.unhide {
   }
 }
 
+a:active.tab div,
+.contact-link,
+.project-link a,
 .active {
+  color: var(--link-color);
   text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.06rem;
+  text-underline-offset: 0.1rem;
+}
+
+.active {
   color: var(--active-color);
 }
 .logo {
@@ -331,7 +337,6 @@ action > *:focus {
 }
 .contact-link {
   margin-left: 1rem;
-  color: var(--link-color);
 }
 
 @media screen and (max-width: 1100px) {
@@ -463,9 +468,6 @@ action > *:focus {
 .project-link {
   padding: 1rem 0;
   word-break: break-all;
-}
-.project-link a {
-  color: var(--link-color);
 }
 .project-link:active {
   text-decoration-line: underline;

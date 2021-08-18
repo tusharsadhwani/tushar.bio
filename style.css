@@ -316,7 +316,7 @@ action > *:focus {
   }
   .main {
     position: relative;
-    top: 4.5rem;
+    top: 4rem;
   }
   .hero {
     margin-left: 5rem;
@@ -418,10 +418,6 @@ action > *:focus {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1.5rem;
-}
-.projects-heading .action {
-  position: relative;
-  bottom: -6px;
 }
 .project {
   padding: 1rem 0;

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sadhlife
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tusharsadhwani.dev
+  * I am sadhlife (https://keybase.io/sadhlife) on keybase.
+  * I have a public key ASDTt96h_ysi4J6eEWUN9ui10rgE5QHSzkJaimf3iYkBKQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d3b7dea1ff2b22e09e9e11650df6e8b5d2b804e501d2ce425a8a67f7898901290a",
+      "host": "keybase.io",
+      "kid": "0120d3b7dea1ff2b22e09e9e11650df6e8b5d2b804e501d2ce425a8a67f7898901290a",
+      "uid": "fa32321f341f914706da6ed5c4274519",
+      "username": "sadhlife"
+    },
+    "merkle_root": {
+      "ctime": 1629485533,
+      "hash": "3affd6ce16d06b8ed198fa63a4962e7e7aa8e7abba0b250d5c3416a7e796cd5c902825d610f580b8c213566e19c83f43b62e8d759bd1785cd7e16697bfedd8ac",
+      "hash_meta": "003ef9258dab774f4f5cf58d4d1aeff88975bb4aa5012aff5cd6bdb17056eb9d",
+      "seqno": 20604818
+    },
+    "service": {
+      "entropy": "k7UWVts19ZFYxldjHYPnaSM0",
+      "hostname": "tusharsadhwani.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.7.0"
+  },
+  "ctime": 1629485585,
+  "expire_in": 504576000,
+  "prev": "1ffebcbf0904699d07b0b0ff9fbdaaf5a0849f643e134cb3aeacdcee4276e4eb",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg07feof8rIuCenhFlDfbotdK4BOUB0s5CWopn94mJASkKp3BheWxvYWTESpcCCMQgH/68vwkEaZ0HsLD/n72q9aCEn2Q+E0yzrqzc7kJ25OvEIHWexL1ntFM8cn8rx0FmXBmydBCovQFeYioYYYdQK4tLAgHCo3NpZ8RAFwal5dGid4l8xnadHrnu+23ijjZSlWIqYfpCFbKRjgb1Yt+jlSS8KpXM6Mapl5A0BMPzkWrWFQVCTHYRDHSxCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIA8UMWfxxcAnynylh2KXwEmzcZE2LHKkoSJ16GeYMKeCo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sadhlife
+
+==================================================================

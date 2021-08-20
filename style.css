@@ -77,7 +77,7 @@ nav > * {
 nav span {
   padding-right: 3rem;
 }
-a.tab div {
+a.tab p {
   font-size: 1.33rem;
 }
 img {
@@ -494,10 +494,10 @@ hr {
     transition-duration: 300ms;
   }
   .links span:first-of-type {
-    padding-top: 20px;
+    padding-top: 10px;
   }
-  a.tab div {
-    margin: 20px;
+  a.tab p {
+    margin: 15px;
   }
   .logo-container {
     align-self: flex-start;

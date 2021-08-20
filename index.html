@@ -187,10 +187,13 @@
               :href="`#${tab}`"
               @click="showMenu = false"
             >
-              <div x-text="tab" :class="{'active': tab === tabData.activeTab}"></div>
+              <p x-text="tab" :class="{'active': tab === tabData.activeTab}"></p>
             </a>
           </span>
         </template>
+        <span>
+          <a title="Blog" class="tab" href="https://sadh.life"><p>Blog</p></a>
+        </span>
       </div>
       <div
         class="social-btns"

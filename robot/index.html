@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <textarea
+      name="commands"
+      id="commands"
+      placeholder="Enter commands here"
+      rows="10"
+      style="width: 500px"
+    ></textarea>
+    <div>
+      <button onclick="runRobot()">Run robot</button>
+      <button onclick="reset()">reset</button>
+    </div>
+    <div id="canvas"></div>
+    <h3 id="output"></h3>
+  </body>
+</html>

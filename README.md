@@ -1,4 +1,4 @@
-# tusharsadhwani.dev
+# tushar.bio
 
 The Portfolio website.
 
